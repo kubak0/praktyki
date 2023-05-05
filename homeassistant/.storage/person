@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "minor_version": 1,
+  "key": "person",
+  "data": {
+    "items": [
+      {
+        "id": "kuba",
+        "name": "Kuba",
+        "user_id": "2eb9633509704a9aac93b618b587e6a9",
+        "device_trackers": []
+      }
+    ]
+  }
+}
