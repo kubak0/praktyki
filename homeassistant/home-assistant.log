@@ -1,3 +1,0 @@
-2023-05-05 19:39:30.345 WARNING (Recorder) [homeassistant.components.recorder.util] The system could not validate that the sqlite3 database at //config/home-assistant_v2.db was shutdown cleanly
-2023-05-05 19:39:30.400 WARNING (Recorder) [homeassistant.components.recorder.util] Ended unfinished session (id=31 from 2023-05-05 17:28:08.990683)
-2023-05-05 19:39:31.058 WARNING (MainThread) [homeassistant.components.systemmonitor.sensor] Cannot read CPU / processor temperature information

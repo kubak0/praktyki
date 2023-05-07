@@ -1,4 +1,0 @@
-# praktyki
-
-# Home Assistant
-
