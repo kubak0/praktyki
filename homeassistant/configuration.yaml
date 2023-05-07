@@ -14,12 +14,6 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
-# supla
-supla:
-  servers:
-    - server: mqtt37.supla.org
-      access_token: 7iCgW0Qi2DX_aHbds8_(fNz(QRH8)!vf
-
 #system monitor 
 sensor:
   - platform: systemmonitor
