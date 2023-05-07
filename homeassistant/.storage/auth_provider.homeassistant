@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "auth_provider.homeassistant",
+  "data": {
+    "users": [
+      {
+        "username": "kuba",
+        "password": "JDJiJDEyJDZWRy9wVTQxMW45cXNpN0hmVGtreGV3cTFWUm9yMUNpdTdsVVl2ZUZ5UlUxZlB6TDltQW1P"
+      },
+      {
+        "username": "kuba2",
+        "password": "JDJiJDEyJHFuZDYyUXZQU0VwWjNzSEVUMjNUMi40aGpDUVpuMlE4ajNJZ0RPWHRXMy5zRm83WmExcWNt"
+      }
+    ]
+  }
+}
