@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace",
+  "data": {
+    "config": {
+      "title": "Dom",
+      "views": [
+        {
+          "path": "default_view",
+          "title": "PC",
+          "badges": [],
+          "cards": [
+            {
+              "type": "gauge",
+              "entity": "sensor.processor_temperature",
+              "max": 100,
+              "needle": true,
+              "name": "Temperatura procesora",
+              "severity": {
+                "green": 0,
+                "yellow": 60,
+                "red": 80
+              }
+            },
+            {
+              "type": "gauge",
+              "entity": "sensor.processor_use",
+              "name": "Zużycie procesora",
+              "needle": true
+            },
+            {
+              "type": "gauge",
+              "entity": "sensor.disk_free",
+              "needle": true,
+              "severity": {
+                "green": 750,
+                "yellow": 200,
+                "red": 0
+              },
+              "max": 950,
+              "min": 9,
+              "name": "Miejsce na dysku"
+            },
+            {
+              "type": "gauge",
+              "entity": "sensor.disk_use_percent_config",
+              "name": "Zużycie dysku",
+              "needle": true,
+              "max": 100
+            },
+            {
+              "type": "gauge",
+              "entity": "sensor.memory_use_percent",
+              "name": "Zużycie RAMU",
+              "needle": true,
+              "severity": {
+                "green": 0,
+                "yellow": 50,
+                "red": 80
+              }
+            }
+          ]
+        },
+        {
+          "title": "Dom",
+          "path": "dom",
+          "badges": [],
+          "cards": [
+            {
+              "type": "media-control",
+              "entity": "media_player.sharp_tv_78_dd_d9_60_d7_10"
+            },
+            {
+              "type": "media-control",
+              "entity": "media_player.pendrive_mi_tv"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

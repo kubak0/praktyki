@@ -1,0 +1,1409 @@
+{
+  "version": 1,
+  "minor_version": 10,
+  "key": "core.entity_registry",
+  "data": {
+    "entities": [
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "4667205225e84ba8d4394bf3b0ef352a",
+        "device_class": null,
+        "device_id": "de7d6d21a911a0b247fe57ed666fa6a4",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.sun_next_dawn",
+        "hidden_by": null,
+        "icon": null,
+        "id": "b9a131bbfd1f3eb340fe16adcf0d29d6",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Następny świt",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_dawn",
+        "unique_id": "4667205225e84ba8d4394bf3b0ef352a-next_dawn",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "4667205225e84ba8d4394bf3b0ef352a",
+        "device_class": null,
+        "device_id": "de7d6d21a911a0b247fe57ed666fa6a4",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.sun_next_dusk",
+        "hidden_by": null,
+        "icon": null,
+        "id": "92635d5ba55f9c443aa04b5f3272f79c",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Następny zmierzch",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_dusk",
+        "unique_id": "4667205225e84ba8d4394bf3b0ef352a-next_dusk",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "4667205225e84ba8d4394bf3b0ef352a",
+        "device_class": null,
+        "device_id": "de7d6d21a911a0b247fe57ed666fa6a4",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.sun_next_midnight",
+        "hidden_by": null,
+        "icon": null,
+        "id": "518afdb5bfbb4e6b1feb28c1902b713f",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Następna północ",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_midnight",
+        "unique_id": "4667205225e84ba8d4394bf3b0ef352a-next_midnight",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "4667205225e84ba8d4394bf3b0ef352a",
+        "device_class": null,
+        "device_id": "de7d6d21a911a0b247fe57ed666fa6a4",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.sun_next_noon",
+        "hidden_by": null,
+        "icon": null,
+        "id": "159cba3f0f1fc3cb3ca626ed942d0ef8",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Następne południe",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_noon",
+        "unique_id": "4667205225e84ba8d4394bf3b0ef352a-next_noon",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "4667205225e84ba8d4394bf3b0ef352a",
+        "device_class": null,
+        "device_id": "de7d6d21a911a0b247fe57ed666fa6a4",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.sun_next_rising",
+        "hidden_by": null,
+        "icon": null,
+        "id": "8a18483b51877a1affc47764fa78d830",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Następny wschód",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_rising",
+        "unique_id": "4667205225e84ba8d4394bf3b0ef352a-next_rising",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "4667205225e84ba8d4394bf3b0ef352a",
+        "device_class": null,
+        "device_id": "de7d6d21a911a0b247fe57ed666fa6a4",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.sun_next_setting",
+        "hidden_by": null,
+        "icon": null,
+        "id": "e3e0841de02018c4b00be7b6ec6d866d",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Następny zachód",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_setting",
+        "unique_id": "4667205225e84ba8d4394bf3b0ef352a-next_setting",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "4667205225e84ba8d4394bf3b0ef352a",
+        "device_class": null,
+        "device_id": "de7d6d21a911a0b247fe57ed666fa6a4",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.sun_solar_elevation",
+        "hidden_by": null,
+        "icon": null,
+        "id": "4de510a94d03249270fa3678e5abf606",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:theme-light-dark",
+        "original_name": "Elewacja słoneczna",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "solar_elevation",
+        "unique_id": "4667205225e84ba8d4394bf3b0ef352a-solar_elevation",
+        "unit_of_measurement": "°"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "4667205225e84ba8d4394bf3b0ef352a",
+        "device_class": null,
+        "device_id": "de7d6d21a911a0b247fe57ed666fa6a4",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.sun_solar_azimuth",
+        "hidden_by": null,
+        "icon": null,
+        "id": "060468d3c89ff9945811be41e9c03d3d",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:sun-angle",
+        "original_name": "Azymut słoneczny",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "solar_azimuth",
+        "unique_id": "4667205225e84ba8d4394bf3b0ef352a-solar_azimuth",
+        "unit_of_measurement": "°"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "person.kuba",
+        "hidden_by": null,
+        "icon": null,
+        "id": "1b81a2308ef87076145cef7456abad9a",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "kuba",
+        "platform": "person",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "kuba",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {},
+        "config_entry_id": "058f3eebb1bdb77ae8da82a81f0cb263",
+        "device_class": null,
+        "device_id": "e08ebba986da4582d293a70f71da15eb",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "media_player.sharp_tv_78_dd_d9_60_d7_10",
+        "hidden_by": null,
+        "icon": null,
+        "id": "7bebe006711e4b6a997dfd8ddc1bdb5d",
+        "has_entity_name": false,
+        "name": "Telewzior",
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Sharp_TV (78:dd:d9:60:d7:10)",
+        "platform": "dlna_dmr",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:69558180-1dd2-11b2-9451-78ddd9724dc4",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.disk_use_percent_config",
+        "hidden_by": null,
+        "icon": null,
+        "id": "c3c6bd735788d7ade90ab9e30af2d325",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:harddisk",
+        "original_name": "Disk use (percent) /config",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "disk_use_percent_config",
+        "unit_of_measurement": "%"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.disk_use",
+        "hidden_by": null,
+        "icon": null,
+        "id": "77c8dcb1d161b35f21f44143573ff16e",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_size",
+        "original_icon": "mdi:harddisk",
+        "original_name": "Disk use /",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "disk_use",
+        "unit_of_measurement": "GiB"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.disk_free",
+        "hidden_by": null,
+        "icon": null,
+        "id": "99be443e9eb230db89ec181902764f21",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_size",
+        "original_icon": "mdi:harddisk",
+        "original_name": "Disk free /",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "disk_free",
+        "unit_of_measurement": "GiB"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.memory_use_percent",
+        "hidden_by": null,
+        "icon": null,
+        "id": "a25a77d51c66fa29f53c5abf76bc5d11",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:memory",
+        "original_name": "Memory use (percent)",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "memory_use_percent",
+        "unit_of_measurement": "%"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.memory_use",
+        "hidden_by": null,
+        "icon": null,
+        "id": "e35d17388b58cc4cb71454f74562c4e3",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_size",
+        "original_icon": "mdi:memory",
+        "original_name": "Memory use",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "memory_use",
+        "unit_of_measurement": "MiB"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.memory_free",
+        "hidden_by": null,
+        "icon": null,
+        "id": "736b81f8c7ded87f044ba5788181c968",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_size",
+        "original_icon": "mdi:memory",
+        "original_name": "Memory free",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "memory_free",
+        "unit_of_measurement": "MiB"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.swap_use_percent",
+        "hidden_by": null,
+        "icon": null,
+        "id": "aa0ee9a78e752a8889d1879d4ee8428e",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:harddisk",
+        "original_name": "Swap use (percent)",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "swap_use_percent",
+        "unit_of_measurement": "%"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.swap_use",
+        "hidden_by": null,
+        "icon": null,
+        "id": "391cda3d9c43f319634ba48cb80deb74",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_size",
+        "original_icon": "mdi:harddisk",
+        "original_name": "Swap use",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "swap_use",
+        "unit_of_measurement": "MiB"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.swap_free",
+        "hidden_by": null,
+        "icon": null,
+        "id": "c18c9567db16e23339d31d5e9d3b0710",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_size",
+        "original_icon": "mdi:harddisk",
+        "original_name": "Swap free",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "swap_free",
+        "unit_of_measurement": "MiB"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.load_1m",
+        "hidden_by": null,
+        "icon": null,
+        "id": "7ea435a70d4dae69ebef9f95612d976b",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:cpu-64-bit",
+        "original_name": "Load (1m)",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "load_1m",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.load_5m",
+        "hidden_by": null,
+        "icon": null,
+        "id": "643598d3a4c0a5e9d23a72d8d540b5c2",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:cpu-64-bit",
+        "original_name": "Load (5m)",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "load_5m",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.load_15m",
+        "hidden_by": null,
+        "icon": null,
+        "id": "8209eca1d03343381fe0f1c0aa172692",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:cpu-64-bit",
+        "original_name": "Load (15m)",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "load_15m",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "total_increasing"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.network_in_eth0",
+        "hidden_by": null,
+        "icon": null,
+        "id": "72870b00889a015650f95524e67369e9",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_size",
+        "original_icon": "mdi:server-network",
+        "original_name": "Network in eth0",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "network_in_eth0",
+        "unit_of_measurement": "MiB"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "total_increasing"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.network_out_eth0",
+        "hidden_by": null,
+        "icon": null,
+        "id": "f3bde6bc334740af31634d2687fd12cb",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_size",
+        "original_icon": "mdi:server-network",
+        "original_name": "Network out eth0",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "network_out_eth0",
+        "unit_of_measurement": "MiB"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.network_throughput_in_eth0",
+        "hidden_by": null,
+        "icon": null,
+        "id": "8309683d934e279fc87713b38051a883",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_rate",
+        "original_icon": null,
+        "original_name": "Network throughput in eth0",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "throughput_network_in_eth0",
+        "unit_of_measurement": "MB/s"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.network_throughput_out_eth0",
+        "hidden_by": null,
+        "icon": null,
+        "id": "090c80e56b08acd159e54fdb3fa46870",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_rate",
+        "original_icon": null,
+        "original_name": "Network throughput out eth0",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "throughput_network_out_eth0",
+        "unit_of_measurement": "MB/s"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "total_increasing"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.packets_in_eth0",
+        "hidden_by": null,
+        "icon": null,
+        "id": "5049c5274dc378f2040ba5142c776fad",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:server-network",
+        "original_name": "Packets in eth0",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "packets_in_eth0",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "total_increasing"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.packets_out_eth0",
+        "hidden_by": null,
+        "icon": null,
+        "id": "bfd8f1906d4c5750f02a2446a2ea59fc",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:server-network",
+        "original_name": "Packets out eth0",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "packets_out_eth0",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.ipv4_address_eth0",
+        "hidden_by": null,
+        "icon": null,
+        "id": "221cbc8e4cb15ded8545667d238170f7",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:ip-network",
+        "original_name": "IPv4 address eth0",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "ipv4_address_eth0",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.ipv6_address_eth0",
+        "hidden_by": null,
+        "icon": null,
+        "id": "da40fa5a00165ed8287fcf76ba125a36",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:ip-network",
+        "original_name": "IPv6 address eth0",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "ipv6_address_eth0",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.processor_use",
+        "hidden_by": null,
+        "icon": null,
+        "id": "bfecf1b4d9bc951e19398b1e6d8023f6",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:cpu-64-bit",
+        "original_name": "Processor use",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "processor_use",
+        "unit_of_measurement": "%"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.processor_temperature",
+        "hidden_by": null,
+        "icon": null,
+        "id": "15464280c24e313d8c69acd4309f74ba",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": "temperature",
+        "original_icon": null,
+        "original_name": "Processor temperature",
+        "platform": "systemmonitor",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "processor_temperature",
+        "unit_of_measurement": "°C"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "total_increasing"
+        },
+        "config_entry_id": "134b7a904316a3bc2ab8d62bcc430263",
+        "device_class": null,
+        "device_id": "40c37e7dbc241898feb711db309f9a85",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.ec230_g1_b_received",
+        "hidden_by": null,
+        "icon": null,
+        "id": "0e5dd9eb8249818288b6953c1a93cf31",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_size",
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 B received",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_bytes_received",
+        "unit_of_measurement": "B"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "total_increasing"
+        },
+        "config_entry_id": "134b7a904316a3bc2ab8d62bcc430263",
+        "device_class": null,
+        "device_id": "40c37e7dbc241898feb711db309f9a85",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.ec230_g1_b_sent",
+        "hidden_by": null,
+        "icon": null,
+        "id": "434fe835a381113acd13f7bcb872e191",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_size",
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 B sent",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_bytes_sent",
+        "unit_of_measurement": "B"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "total_increasing"
+        },
+        "config_entry_id": "134b7a904316a3bc2ab8d62bcc430263",
+        "device_class": null,
+        "device_id": "40c37e7dbc241898feb711db309f9a85",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.ec230_g1_packets_received",
+        "hidden_by": null,
+        "icon": null,
+        "id": "8f727a116968e4473bd4ee378e641b96",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 packets received",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_packets_received",
+        "unit_of_measurement": "packets"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "total_increasing"
+        },
+        "config_entry_id": "134b7a904316a3bc2ab8d62bcc430263",
+        "device_class": null,
+        "device_id": "40c37e7dbc241898feb711db309f9a85",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.ec230_g1_packets_sent",
+        "hidden_by": null,
+        "icon": null,
+        "id": "10118fa6c4e33b3e7f7d7cc6af1f3bbf",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 packets sent",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_packets_sent",
+        "unit_of_measurement": "packets"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "134b7a904316a3bc2ab8d62bcc430263",
+        "device_class": null,
+        "device_id": "40c37e7dbc241898feb711db309f9a85",
+        "disabled_by": null,
+        "entity_category": "diagnostic",
+        "entity_id": "sensor.ec230_g1_external_ip",
+        "hidden_by": null,
+        "icon": null,
+        "id": "fcdad1278679a416597f404614bd51ee",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 External IP",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_ip",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "134b7a904316a3bc2ab8d62bcc430263",
+        "device_class": null,
+        "device_id": "40c37e7dbc241898feb711db309f9a85",
+        "disabled_by": "integration",
+        "entity_category": "diagnostic",
+        "entity_id": "sensor.ec230_g1_uptime",
+        "hidden_by": null,
+        "icon": null,
+        "id": "d8e96d454a350411eb243b9de96de0c3",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 Uptime",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_uptime",
+        "unit_of_measurement": "s"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "134b7a904316a3bc2ab8d62bcc430263",
+        "device_class": null,
+        "device_id": "40c37e7dbc241898feb711db309f9a85",
+        "disabled_by": "integration",
+        "entity_category": "diagnostic",
+        "entity_id": "sensor.ec230_g1_wan_status",
+        "hidden_by": null,
+        "icon": null,
+        "id": "96cd3bd0c84b8ed25cf8f684e2bc1575",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 wan status",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_wan_status",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "134b7a904316a3bc2ab8d62bcc430263",
+        "device_class": null,
+        "device_id": "40c37e7dbc241898feb711db309f9a85",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.ec230_g1_kib_s_received",
+        "hidden_by": null,
+        "icon": null,
+        "id": "a50a0bec25fd19fe7f600551a821b8b9",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "sensor": {
+            "suggested_display_precision": 1
+          },
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_rate",
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 KiB/s received",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_KiB/sec_received",
+        "unit_of_measurement": "KiB/s"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "134b7a904316a3bc2ab8d62bcc430263",
+        "device_class": null,
+        "device_id": "40c37e7dbc241898feb711db309f9a85",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.ec230_g1_kib_s_sent",
+        "hidden_by": null,
+        "icon": null,
+        "id": "b738743d0a9af003752856400f3f7ad9",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "sensor": {
+            "suggested_display_precision": 1
+          },
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_rate",
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 KiB/s sent",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_KiB/sec_sent",
+        "unit_of_measurement": "KiB/s"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "134b7a904316a3bc2ab8d62bcc430263",
+        "device_class": null,
+        "device_id": "40c37e7dbc241898feb711db309f9a85",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.ec230_g1_packets_s_received",
+        "hidden_by": null,
+        "icon": null,
+        "id": "e5b97033102477d45abee50c73248f9e",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 packets/s received",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_packets/sec_received",
+        "unit_of_measurement": "packets/s"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "134b7a904316a3bc2ab8d62bcc430263",
+        "device_class": null,
+        "device_id": "40c37e7dbc241898feb711db309f9a85",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.ec230_g1_packets_s_sent",
+        "hidden_by": null,
+        "icon": null,
+        "id": "84d548bb7f8244e1f13573f7349d11bf",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 packets/s sent",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_packets/sec_sent",
+        "unit_of_measurement": "packets/s"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "134b7a904316a3bc2ab8d62bcc430263",
+        "device_class": null,
+        "device_id": "40c37e7dbc241898feb711db309f9a85",
+        "disabled_by": null,
+        "entity_category": "diagnostic",
+        "entity_id": "binary_sensor.ec230_g1_wan_status",
+        "hidden_by": null,
+        "icon": null,
+        "id": "e46966f5ddb59a978cfb882563c1c867",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "connectivity",
+        "original_icon": null,
+        "original_name": "EC230-G1 wan status",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_wan_status",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {},
+        "config_entry_id": "5e0f30b1ed62d01da905fe68a0c9a3c3",
+        "device_class": null,
+        "device_id": "cdf279d62b5e27f6d94661093cb2eb8e",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "media_player.pendrive_mi_tv",
+        "hidden_by": null,
+        "icon": null,
+        "id": "178b50a14d86aae832ee90d3193bb172",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": null,
+        "platform": "cast",
+        "supported_features": 131968,
+        "translation_key": null,
+        "unique_id": "1b112528-74c5-df8c-6562-88f3ba91f562",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "f35b61bf3cc5b1a8e9d988b6a3fbc333",
+        "device_class": null,
+        "device_id": "058c89c70708a7b4741e4bae034f3a84",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "remote.pendrive_mi_tv",
+        "hidden_by": null,
+        "icon": null,
+        "id": "a867627534035122393b69451c1b640f",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": null,
+        "platform": "androidtv_remote",
+        "supported_features": 4,
+        "translation_key": null,
+        "unique_id": "70:3e:97:6c:43:9d",
+        "unit_of_measurement": null
+      }
+    ]
+  }
+}
