@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.config_entries",
+  "data": {
+    "entries": [
+      {
+        "entry_id": "8445733d190b0776ffe2eb26c3ca1cbc",
+        "version": 1,
+        "domain": "sun",
+        "title": "Sun",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "import",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "21cb9d744c20204db8daa77681ad3dcf",
+        "version": 1,
+        "domain": "radio_browser",
+        "title": "Radio Browser",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "onboarding",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "988eed26680aa09c3f11602c532d6d41",
+        "version": 1,
+        "domain": "upnp",
+        "title": "EC230-G1",
+        "data": {
+          "udn": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37",
+          "st": "urn:schemas-upnp-org:device:InternetGatewayDevice:1",
+          "original_udn": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37",
+          "location": "http://192.168.0.1:1900/gatedesc.xml",
+          "mac_address": null,
+          "host": "192.168.0.1"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ssdp",
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37::urn:schemas-upnp-org:device:InternetGatewayDevice:1",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "5e25d66e88d3658bab0b935aceec031f",
+        "version": 1,
+        "domain": "dlna_dmr",
+        "title": "[TV] Samsung Q60 Series (65)",
+        "data": {
+          "url": "http://192.168.0.105:9197/dmr",
+          "device_id": "uuid:45ba576a-7a66-46fd-b364-328a4b92b8f0",
+          "type": "urn:schemas-upnp-org:device:MediaRenderer:1",
+          "mac": null
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ssdp",
+        "unique_id": "uuid:45ba576a-7a66-46fd-b364-328a4b92b8f0",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "5d84b2bc48c8f738c1cd9dfc7df0a9ca",
+        "version": 1,
+        "domain": "cast",
+        "title": "Google Cast",
+        "data": {
+          "ignore_cec": [],
+          "known_hosts": [
+            "192.168.0.104"
+          ],
+          "uuid": [],
+          "user_id": "086c23cb0a6f477f8fd8382669ffd74c"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "zeroconf",
+        "unique_id": "cast",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "62681c8583b318d1f2eaa8d2c4e7e72a",
+        "version": 1,
+        "domain": "androidtv_remote",
+        "title": "Pendrive Mi TV",
+        "data": {
+          "host": "192.168.0.104",
+          "name": "Pendrive Mi TV"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": "70:3e:97:6c:43:9d",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "2f30ff85dc94e861321d4ff687de98a5",
+        "version": 2,
+        "domain": "samsungtv",
+        "title": "Samsung Q77BA 55 TV (QE55Q77BATXXH)",
+        "data": {
+          "host": "192.168.0.103",
+          "mac": "1c:86:9a:af:8e:f4",
+          "model": "QE55Q77BATXXH"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": "208b11f7-ab82-4701-89e3-035c870836c6",
+        "disabled_by": null
+      }
+    ]
+  }
+}

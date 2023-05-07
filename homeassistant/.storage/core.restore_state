@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.restore_state",
+  "data": [
+    {
+      "state": {
+        "entity_id": "person.kuba",
+        "state": "unknown",
+        "attributes": {
+          "editable": true,
+          "id": "kuba",
+          "user_id": "48ce88ac754345008ac1af40e7621557",
+          "device_trackers": [],
+          "friendly_name": "kuba"
+        },
+        "last_changed": "2023-05-06T21:52:33.888620+00:00",
+        "last_updated": "2023-05-06T21:53:21.253524+00:00",
+        "context": {
+          "id": "01GZSGW7B58K3RC6TGMXVYGQ9Z",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-05-07T00:08:21.264347+00:00"
+    }
+  ]
+}

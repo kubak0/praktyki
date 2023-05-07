@@ -1,0 +1,702 @@
+{
+  "version": 1,
+  "minor_version": 10,
+  "key": "core.entity_registry",
+  "data": {
+    "entities": [
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "8445733d190b0776ffe2eb26c3ca1cbc",
+        "device_class": null,
+        "device_id": "d051022874317c5280012e305e40702a",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.sun_next_dawn",
+        "hidden_by": null,
+        "icon": null,
+        "id": "565d6fe3b0b17a2c8fe3d01af03eb14b",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Następny świt",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_dawn",
+        "unique_id": "8445733d190b0776ffe2eb26c3ca1cbc-next_dawn",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "8445733d190b0776ffe2eb26c3ca1cbc",
+        "device_class": null,
+        "device_id": "d051022874317c5280012e305e40702a",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.sun_next_dusk",
+        "hidden_by": null,
+        "icon": null,
+        "id": "3ac4d2d874c3e509ace1682ea6cd4272",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Następny zmierzch",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_dusk",
+        "unique_id": "8445733d190b0776ffe2eb26c3ca1cbc-next_dusk",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "8445733d190b0776ffe2eb26c3ca1cbc",
+        "device_class": null,
+        "device_id": "d051022874317c5280012e305e40702a",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.sun_next_midnight",
+        "hidden_by": null,
+        "icon": null,
+        "id": "dc66feb06681e3ebb3154d523d5524ae",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Następna północ",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_midnight",
+        "unique_id": "8445733d190b0776ffe2eb26c3ca1cbc-next_midnight",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "8445733d190b0776ffe2eb26c3ca1cbc",
+        "device_class": null,
+        "device_id": "d051022874317c5280012e305e40702a",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.sun_next_noon",
+        "hidden_by": null,
+        "icon": null,
+        "id": "6004c85f820f8c411a8659c3da0c734a",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Następne południe",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_noon",
+        "unique_id": "8445733d190b0776ffe2eb26c3ca1cbc-next_noon",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "8445733d190b0776ffe2eb26c3ca1cbc",
+        "device_class": null,
+        "device_id": "d051022874317c5280012e305e40702a",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.sun_next_rising",
+        "hidden_by": null,
+        "icon": null,
+        "id": "36bbfa5ec51e5c442d7886c87d72f298",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Następny wschód",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_rising",
+        "unique_id": "8445733d190b0776ffe2eb26c3ca1cbc-next_rising",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "8445733d190b0776ffe2eb26c3ca1cbc",
+        "device_class": null,
+        "device_id": "d051022874317c5280012e305e40702a",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.sun_next_setting",
+        "hidden_by": null,
+        "icon": null,
+        "id": "54c8acdbbd3fc0d8f0afc862071981a8",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Następny zachód",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_setting",
+        "unique_id": "8445733d190b0776ffe2eb26c3ca1cbc-next_setting",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "8445733d190b0776ffe2eb26c3ca1cbc",
+        "device_class": null,
+        "device_id": "d051022874317c5280012e305e40702a",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.sun_solar_elevation",
+        "hidden_by": null,
+        "icon": null,
+        "id": "f643d35c1ab8aeaa3994cd59031ded14",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:theme-light-dark",
+        "original_name": "Elewacja słoneczna",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "solar_elevation",
+        "unique_id": "8445733d190b0776ffe2eb26c3ca1cbc-solar_elevation",
+        "unit_of_measurement": "°"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "8445733d190b0776ffe2eb26c3ca1cbc",
+        "device_class": null,
+        "device_id": "d051022874317c5280012e305e40702a",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.sun_solar_azimuth",
+        "hidden_by": null,
+        "icon": null,
+        "id": "13a40171fe93b98235a72fecab610da9",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:sun-angle",
+        "original_name": "Azymut słoneczny",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "solar_azimuth",
+        "unique_id": "8445733d190b0776ffe2eb26c3ca1cbc-solar_azimuth",
+        "unit_of_measurement": "°"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "person.kuba",
+        "hidden_by": null,
+        "icon": null,
+        "id": "db8ba18a83cc7e6c9831bf59ec1c0d1e",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "kuba",
+        "platform": "person",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "kuba",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "total_increasing"
+        },
+        "config_entry_id": "988eed26680aa09c3f11602c532d6d41",
+        "device_class": null,
+        "device_id": "48eeabbc708084a5af1706e0d6f295f9",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.ec230_g1_b_received",
+        "hidden_by": null,
+        "icon": null,
+        "id": "7d7ae48c07a3d5dabf99f5c58acf2477",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_size",
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 B received",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_bytes_received",
+        "unit_of_measurement": "B"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "total_increasing"
+        },
+        "config_entry_id": "988eed26680aa09c3f11602c532d6d41",
+        "device_class": null,
+        "device_id": "48eeabbc708084a5af1706e0d6f295f9",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.ec230_g1_b_sent",
+        "hidden_by": null,
+        "icon": null,
+        "id": "26a62c0dc962964a331e3d6b8c34e6bc",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_size",
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 B sent",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_bytes_sent",
+        "unit_of_measurement": "B"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "total_increasing"
+        },
+        "config_entry_id": "988eed26680aa09c3f11602c532d6d41",
+        "device_class": null,
+        "device_id": "48eeabbc708084a5af1706e0d6f295f9",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.ec230_g1_packets_received",
+        "hidden_by": null,
+        "icon": null,
+        "id": "53ee2667e5cffc76dcf3a8a30c91bc80",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 packets received",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_packets_received",
+        "unit_of_measurement": "packets"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "total_increasing"
+        },
+        "config_entry_id": "988eed26680aa09c3f11602c532d6d41",
+        "device_class": null,
+        "device_id": "48eeabbc708084a5af1706e0d6f295f9",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.ec230_g1_packets_sent",
+        "hidden_by": null,
+        "icon": null,
+        "id": "f5659dfbecb25edf224a58cb17db7e29",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 packets sent",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_packets_sent",
+        "unit_of_measurement": "packets"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "988eed26680aa09c3f11602c532d6d41",
+        "device_class": null,
+        "device_id": "48eeabbc708084a5af1706e0d6f295f9",
+        "disabled_by": null,
+        "entity_category": "diagnostic",
+        "entity_id": "sensor.ec230_g1_external_ip",
+        "hidden_by": null,
+        "icon": null,
+        "id": "f222b9e5c82116592d1bb04cb29a54e3",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 External IP",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_ip",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "988eed26680aa09c3f11602c532d6d41",
+        "device_class": null,
+        "device_id": "48eeabbc708084a5af1706e0d6f295f9",
+        "disabled_by": "integration",
+        "entity_category": "diagnostic",
+        "entity_id": "sensor.ec230_g1_uptime",
+        "hidden_by": null,
+        "icon": null,
+        "id": "93ea007e3853661ecc50471f48a48a84",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 Uptime",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_uptime",
+        "unit_of_measurement": "s"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "988eed26680aa09c3f11602c532d6d41",
+        "device_class": null,
+        "device_id": "48eeabbc708084a5af1706e0d6f295f9",
+        "disabled_by": "integration",
+        "entity_category": "diagnostic",
+        "entity_id": "sensor.ec230_g1_wan_status",
+        "hidden_by": null,
+        "icon": null,
+        "id": "2c0360242c363b40fedf2eaea4524db2",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 wan status",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_wan_status",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "988eed26680aa09c3f11602c532d6d41",
+        "device_class": null,
+        "device_id": "48eeabbc708084a5af1706e0d6f295f9",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.ec230_g1_kib_s_received",
+        "hidden_by": null,
+        "icon": null,
+        "id": "2f92c47ca058c962d243608652cb2654",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "sensor": {
+            "suggested_display_precision": 1
+          },
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_rate",
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 KiB/s received",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_KiB/sec_received",
+        "unit_of_measurement": "KiB/s"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "988eed26680aa09c3f11602c532d6d41",
+        "device_class": null,
+        "device_id": "48eeabbc708084a5af1706e0d6f295f9",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.ec230_g1_kib_s_sent",
+        "hidden_by": null,
+        "icon": null,
+        "id": "06967c53dc84fcd1053b70c42d229e7d",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "sensor": {
+            "suggested_display_precision": 1
+          },
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "data_rate",
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 KiB/s sent",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_KiB/sec_sent",
+        "unit_of_measurement": "KiB/s"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "988eed26680aa09c3f11602c532d6d41",
+        "device_class": null,
+        "device_id": "48eeabbc708084a5af1706e0d6f295f9",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.ec230_g1_packets_s_received",
+        "hidden_by": null,
+        "icon": null,
+        "id": "337cefd3f9d7fdf4ccb085a6f54f9ff1",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 packets/s received",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_packets/sec_received",
+        "unit_of_measurement": "packets/s"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "988eed26680aa09c3f11602c532d6d41",
+        "device_class": null,
+        "device_id": "48eeabbc708084a5af1706e0d6f295f9",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.ec230_g1_packets_s_sent",
+        "hidden_by": null,
+        "icon": null,
+        "id": "7d5d8df58b460d755c5bc2cfded676ff",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:server-network",
+        "original_name": "EC230-G1 packets/s sent",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_packets/sec_sent",
+        "unit_of_measurement": "packets/s"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "988eed26680aa09c3f11602c532d6d41",
+        "device_class": null,
+        "device_id": "48eeabbc708084a5af1706e0d6f295f9",
+        "disabled_by": null,
+        "entity_category": "diagnostic",
+        "entity_id": "binary_sensor.ec230_g1_wan_status",
+        "hidden_by": null,
+        "icon": null,
+        "id": "6a556e6ad01746b7c357d57607b78218",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "connectivity",
+        "original_icon": null,
+        "original_name": "EC230-G1 wan status",
+        "platform": "upnp",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_wan_status",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {},
+        "config_entry_id": "5e25d66e88d3658bab0b935aceec031f",
+        "device_class": null,
+        "device_id": "d8598ee67784085684c38d989e48e392",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "media_player.tv_samsung_q60_series_65",
+        "hidden_by": null,
+        "icon": null,
+        "id": "cd880abb2958b6da8fa04f6b78eb38d2",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "[TV] Samsung Q60 Series (65)",
+        "platform": "dlna_dmr",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "uuid:45ba576a-7a66-46fd-b364-328a4b92b8f0",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {},
+        "config_entry_id": "5d84b2bc48c8f738c1cd9dfc7df0a9ca",
+        "device_class": null,
+        "device_id": "f3ff10b90b89c3f413ca7148647049e1",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "media_player.pendrive_mi_tv",
+        "hidden_by": null,
+        "icon": null,
+        "id": "14480be122f60b7e2e5b73d799d70452",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": null,
+        "platform": "cast",
+        "supported_features": 131968,
+        "translation_key": null,
+        "unique_id": "1b112528-74c5-df8c-6562-88f3ba91f562",
+        "unit_of_measurement": null
+      }
+    ]
+  }
+}

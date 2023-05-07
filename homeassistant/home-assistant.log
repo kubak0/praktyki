@@ -1,0 +1,15 @@
+2023-05-06 21:52:55.301 WARNING (MainThread) [homeassistant.setup] Setup of ssdp is taking over 10 seconds.
+2023-05-06 21:53:17.586 WARNING (MainThread) [homeassistant.setup] Setup of input_boolean is taking over 10 seconds.
+2023-05-06 21:53:17.586 WARNING (MainThread) [homeassistant.setup] Setup of input_text is taking over 10 seconds.
+2023-05-06 21:53:17.586 WARNING (MainThread) [homeassistant.setup] Setup of input_button is taking over 10 seconds.
+2023-05-06 21:53:17.587 WARNING (MainThread) [homeassistant.setup] Setup of application_credentials is taking over 10 seconds.
+2023-05-06 21:53:17.588 WARNING (MainThread) [homeassistant.setup] Setup of automation is taking over 10 seconds.
+2023-05-06 21:53:17.588 WARNING (MainThread) [homeassistant.setup] Setup of script is taking over 10 seconds.
+2023-05-06 21:54:15.004 WARNING (zeroconf-ServiceBrowser-_googlecast._tcp-126) [pychromecast.dial] Failed to determine cast type for host <unknown> (<urlopen error [Errno 113] Host is unreachable>) (services:{ServiceInfo(type='mdns', data='MiTV-AESP0-1b11252874c5df8c656288f3ba91f562._googlecast._tcp.local.')})
+2023-05-06 21:54:18.077 ERROR (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Failed to connect to service ServiceInfo(type='mdns', data='MiTV-AESP0-1b11252874c5df8c656288f3ba91f562._googlecast._tcp.local.'), retrying in 5.0s
+2023-05-06 21:54:55.157 ERROR (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Error reading from socket.
+2023-05-06 21:54:55.157 WARNING (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Error communicating with socket, resetting connection
+2023-05-06 21:54:55.169 ERROR (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Failed to connect to service ServiceInfo(type='mdns', data='MiTV-AESP0-1b11252874c5df8c656288f3ba91f562._googlecast._tcp.local.'), retrying in 5.0s
+2023-05-06 21:56:04.076 ERROR (Thread-5 (_thread_main)) [paho.mqtt.client] failed to receive on socket: [Errno 104] Connection reset by peer
+2023-05-06 21:56:05.156 ERROR (Thread-5 (_thread_main)) [paho.mqtt.client] failed to receive on socket: [Errno 104] Connection reset by peer
+2023-05-06 21:56:07.235 ERROR (Thread-5 (_thread_main)) [paho.mqtt.client] failed to receive on socket: [Errno 104] Connection reset by peer
