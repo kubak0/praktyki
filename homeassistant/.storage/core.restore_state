@@ -11,19 +11,554 @@
           "editable": true,
           "id": "kuba",
           "user_id": "48ce88ac754345008ac1af40e7621557",
-          "device_trackers": [],
+          "device_trackers": [
+            "device_tracker.iphone_kuba"
+          ],
           "friendly_name": "kuba"
         },
-        "last_changed": "2023-05-06T21:52:33.888620+00:00",
-        "last_updated": "2023-05-06T21:53:21.253524+00:00",
+        "last_changed": "2023-05-07T01:06:17.183112+00:00",
+        "last_updated": "2023-05-07T01:06:33.078703+00:00",
         "context": {
-          "id": "01GZSGW7B58K3RC6TGMXVYGQ9Z",
+          "id": "01GZSVXZFP4ZZ5PYYGTX3YVF5A",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": null,
-      "last_seen": "2023-05-07T00:08:21.264347+00:00"
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.iphone_kuba_activity",
+        "state": "Stationary",
+        "attributes": {
+          "Confidence": "High",
+          "Types": [
+            "Stationary"
+          ],
+          "icon": "mdi:human-male",
+          "friendly_name": "iPhone kuba Activity"
+        },
+        "last_changed": "2023-05-07T01:06:18.278786+00:00",
+        "last_updated": "2023-05-07T01:06:18.278786+00:00",
+        "context": {
+          "id": "01GZSVXH16BX9MVYHYN5KP8332",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "Stationary",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.iphone_kuba_distance",
+        "state": "0",
+        "attributes": {
+          "unit_of_measurement": "m",
+          "icon": "mdi:hiking",
+          "friendly_name": "iPhone kuba Distance"
+        },
+        "last_changed": "2023-05-07T01:06:18.278842+00:00",
+        "last_updated": "2023-05-07T01:06:18.278842+00:00",
+        "context": {
+          "id": "01GZSVXH16EZYMXKHBGFAQQA72",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "m"
+      },
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.iphone_kuba_floors_ascended",
+        "state": "0",
+        "attributes": {
+          "unit_of_measurement": "floors",
+          "icon": "mdi:stairs-up",
+          "friendly_name": "iPhone kuba Floors Ascended"
+        },
+        "last_changed": "2023-05-07T01:06:18.278888+00:00",
+        "last_updated": "2023-05-07T01:06:18.278888+00:00",
+        "context": {
+          "id": "01GZSVXH16K1JCA6C7QPS1SG5H",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "floors"
+      },
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.iphone_kuba_floors_descended",
+        "state": "0",
+        "attributes": {
+          "unit_of_measurement": "floors",
+          "icon": "mdi:stairs-down",
+          "friendly_name": "iPhone kuba Floors Descended"
+        },
+        "last_changed": "2023-05-07T01:06:18.278931+00:00",
+        "last_updated": "2023-05-07T01:06:18.278931+00:00",
+        "context": {
+          "id": "01GZSVXH16VWN43G6MWBRJWN6V",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "floors"
+      },
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.iphone_kuba_battery_level",
+        "state": "74",
+        "attributes": {
+          "unit_of_measurement": "%",
+          "device_class": "battery",
+          "icon": "mdi:battery-70",
+          "friendly_name": "iPhone kuba Battery Level"
+        },
+        "last_changed": "2023-05-07T01:06:18.278978+00:00",
+        "last_updated": "2023-05-07T01:06:18.278978+00:00",
+        "context": {
+          "id": "01GZSVXH163JRB3VVMQRJNN3ZM",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": 74,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.iphone_kuba_battery_state",
+        "state": "Not Charging",
+        "attributes": {
+          "Low Power Mode": false,
+          "icon": "mdi:battery-70",
+          "friendly_name": "iPhone kuba Battery State"
+        },
+        "last_changed": "2023-05-07T01:06:18.279021+00:00",
+        "last_updated": "2023-05-07T01:06:18.279021+00:00",
+        "context": {
+          "id": "01GZSVXH1712XV05MKXPRQ32N0",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "Not Charging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.iphone_kuba_steps",
+        "state": "0",
+        "attributes": {
+          "unit_of_measurement": "steps",
+          "icon": "mdi:walk",
+          "friendly_name": "iPhone kuba Steps"
+        },
+        "last_changed": "2023-05-07T01:06:18.279064+00:00",
+        "last_updated": "2023-05-07T01:06:18.279064+00:00",
+        "context": {
+          "id": "01GZSVXH17ESZTDYE09FR2V740",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "steps"
+      },
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.iphone_kuba_storage",
+        "state": "7.59",
+        "attributes": {
+          "Available": "3,71 GB",
+          "Available (Important)": "13,49 GB",
+          "Available (Opportunistic)": "4,85 GB",
+          "Total": "63,88 GB",
+          "unit_of_measurement": "% available",
+          "icon": "mdi:database",
+          "friendly_name": "iPhone kuba Storage"
+        },
+        "last_changed": "2023-05-07T01:06:18.279107+00:00",
+        "last_updated": "2023-05-07T01:06:18.279107+00:00",
+        "context": {
+          "id": "01GZSVXH1788WH9STDQ2Q3QKG6",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "7.59",
+        "native_unit_of_measurement": "% available"
+      },
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.iphone_kuba_ssid",
+        "state": "Dom_L7",
+        "attributes": {
+          "icon": "mdi:wifi",
+          "friendly_name": "iPhone kuba SSID"
+        },
+        "last_changed": "2023-05-07T01:06:18.279148+00:00",
+        "last_updated": "2023-05-07T01:06:18.279148+00:00",
+        "context": {
+          "id": "01GZSVXH17G1WJRBV8H4KA875K",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "Dom_L7",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.iphone_kuba_bssid",
+        "state": "c0:6:c3:92:22:a3",
+        "attributes": {
+          "icon": "mdi:wifi-star",
+          "friendly_name": "iPhone kuba BSSID"
+        },
+        "last_changed": "2023-05-07T01:06:18.279190+00:00",
+        "last_updated": "2023-05-07T01:06:18.279190+00:00",
+        "context": {
+          "id": "01GZSVXH17RJXEAW856ZVDEFRF",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "c0:6:c3:92:22:a3",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.iphone_kuba_connection_type",
+        "state": "Wi-Fi",
+        "attributes": {
+          "icon": "mdi:wifi",
+          "friendly_name": "iPhone kuba Connection Type"
+        },
+        "last_changed": "2023-05-07T01:06:18.279232+00:00",
+        "last_updated": "2023-05-07T01:06:18.279232+00:00",
+        "context": {
+          "id": "01GZSVXH170X2F1Q1EFCC0KVR3",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "Wi-Fi",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.iphone_kuba_sim_1",
+        "state": "Orange",
+        "attributes": {
+          "Allows VoIP": true,
+          "Carrier ID": "0000000100000001",
+          "Carrier Name": "Orange",
+          "Current Radio Technology": "Long-Term Evolution (LTE)",
+          "ISO Country Code": "pl",
+          "Mobile Country Code": "260",
+          "Mobile Network Code": "03",
+          "icon": "mdi:sim",
+          "friendly_name": "iPhone kuba SIM 1"
+        },
+        "last_changed": "2023-05-07T01:06:18.279274+00:00",
+        "last_updated": "2023-05-07T01:06:18.279274+00:00",
+        "context": {
+          "id": "01GZSVXH17QB7N37TPJ8R6N7M8",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "Orange",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.iphone_kuba_sim_2",
+        "state": "N/A",
+        "attributes": {
+          "Allows VoIP": true,
+          "Carrier ID": "0000000100000002",
+          "Carrier Name": "N/A",
+          "ISO Country Code": "N/A",
+          "Mobile Country Code": "N/A",
+          "Mobile Network Code": "N/A",
+          "icon": "mdi:sim",
+          "friendly_name": "iPhone kuba SIM 2"
+        },
+        "last_changed": "2023-05-07T01:06:18.279314+00:00",
+        "last_updated": "2023-05-07T01:06:18.279314+00:00",
+        "context": {
+          "id": "01GZSVXH17X75XZ292Y3XP5S35",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "N/A",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.iphone_kuba_geocoded_location",
+        "state": "Unknown",
+        "attributes": {
+          "icon": "mdi:map",
+          "friendly_name": "iPhone kuba Geocoded Location"
+        },
+        "last_changed": "2023-05-07T01:06:18.279356+00:00",
+        "last_updated": "2023-05-07T01:06:18.279356+00:00",
+        "context": {
+          "id": "01GZSVXH17H6KCE5D3B0VG1M2W",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "Unknown",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.iphone_kuba_last_update_trigger",
+        "state": "Launch",
+        "attributes": {
+          "icon": "mdi:cellphone-wireless",
+          "friendly_name": "iPhone kuba Last Update Trigger"
+        },
+        "last_changed": "2023-05-07T01:06:18.279397+00:00",
+        "last_updated": "2023-05-07T01:06:18.279397+00:00",
+        "context": {
+          "id": "01GZSVXH17PF52R4PANJ061J92",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "Launch",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "update.hacs_update",
+        "state": "off",
+        "attributes": {
+          "auto_update": false,
+          "installed_version": "1.32.1",
+          "in_progress": false,
+          "latest_version": "1.32.1",
+          "release_summary": null,
+          "release_url": "https://github.com/hacs/integration/releases/1.32.1",
+          "skipped_version": null,
+          "title": null,
+          "entity_picture": "https://brands.home-assistant.io/_/hacs/icon.png",
+          "friendly_name": "HACS update",
+          "supported_features": 21
+        },
+        "last_changed": "2023-05-07T01:06:18.279485+00:00",
+        "last_updated": "2023-05-07T01:06:18.279485+00:00",
+        "context": {
+          "id": "01GZSVXH17Q5QW3PB53KVXSEK3",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "update.swipe_card_update",
+        "state": "off",
+        "attributes": {
+          "auto_update": false,
+          "installed_version": "v5.0.0",
+          "in_progress": false,
+          "latest_version": "v5.0.0",
+          "release_summary": null,
+          "release_url": "https://github.com/bramkragten/swipe-card/releases/v5.0.0",
+          "skipped_version": null,
+          "title": null,
+          "friendly_name": "Swipe Card update",
+          "supported_features": 21
+        },
+        "last_changed": "2023-05-07T01:06:18.279534+00:00",
+        "last_updated": "2023-05-07T01:06:18.279534+00:00",
+        "context": {
+          "id": "01GZSVXH17C5NZQ0109CDRPSYD",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "update.layout_card_update",
+        "state": "off",
+        "attributes": {
+          "auto_update": false,
+          "installed_version": "2.4.4",
+          "in_progress": false,
+          "latest_version": "2.4.4",
+          "release_summary": null,
+          "release_url": "https://github.com/thomasloven/lovelace-layout-card/releases/2.4.4",
+          "skipped_version": null,
+          "title": null,
+          "friendly_name": "layout-card update",
+          "supported_features": 21
+        },
+        "last_changed": "2023-05-07T01:06:18.279576+00:00",
+        "last_updated": "2023-05-07T01:06:18.279576+00:00",
+        "context": {
+          "id": "01GZSVXH17XWJBZSXQWYX0TED2",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "update.card_mod_update",
+        "state": "off",
+        "attributes": {
+          "auto_update": false,
+          "installed_version": "3.2.2",
+          "in_progress": false,
+          "latest_version": "3.2.2",
+          "release_summary": null,
+          "release_url": "https://github.com/thomasloven/lovelace-card-mod/releases/3.2.2",
+          "skipped_version": null,
+          "title": null,
+          "friendly_name": "card-mod update",
+          "supported_features": 21
+        },
+        "last_changed": "2023-05-07T01:06:18.279617+00:00",
+        "last_updated": "2023-05-07T01:06:18.279617+00:00",
+        "context": {
+          "id": "01GZSVXH17PGJGXX3RNAG6MVAA",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "update.button_card_update",
+        "state": "off",
+        "attributes": {
+          "auto_update": false,
+          "installed_version": "v3.5.0",
+          "in_progress": false,
+          "latest_version": "v3.5.0",
+          "release_summary": null,
+          "release_url": "https://github.com/custom-cards/button-card/releases/v3.5.0",
+          "skipped_version": null,
+          "title": null,
+          "friendly_name": "button-card update",
+          "supported_features": 21
+        },
+        "last_changed": "2023-05-07T01:06:18.279653+00:00",
+        "last_updated": "2023-05-07T01:06:18.279653+00:00",
+        "context": {
+          "id": "01GZSVXH1700TVBT5K8RB4269V",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "device_tracker.iphone_kuba",
+        "state": "unknown",
+        "attributes": {
+          "source_type": "gps",
+          "friendly_name": "iPhone kuba"
+        },
+        "last_changed": "2023-05-07T01:06:18.279720+00:00",
+        "last_updated": "2023-05-07T01:06:18.279720+00:00",
+        "context": {
+          "id": "01GZSVXH17E4V0TPBVTSFTD8QX",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "binary_sensor.iphone_kuba_focus",
+        "state": "off",
+        "attributes": {
+          "icon": "mdi:moon-waning-crescent",
+          "friendly_name": "iPhone kuba Focus"
+        },
+        "last_changed": "2023-05-07T01:06:18.279787+00:00",
+        "last_updated": "2023-05-07T01:06:18.279787+00:00",
+        "context": {
+          "id": "01GZSVXH17WNV245TYTTBQ0C6R",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-05-07T01:06:33.095998+00:00"
     }
   ]
 }

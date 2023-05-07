@@ -112,13 +112,93 @@
         "data": {
           "host": "192.168.0.103",
           "mac": "1c:86:9a:af:8e:f4",
-          "model": "QE55Q77BATXXH"
+          "model": "QE55Q77BATXXH",
+          "ssdp_rendering_control_location": "http://192.168.0.103:9197/dmr"
         },
         "options": {},
         "pref_disable_new_entities": false,
         "pref_disable_polling": false,
         "source": "ignore",
         "unique_id": "208b11f7-ab82-4701-89e3-035c870836c6",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "9549ccdb0b665466fda28a1d705a50cb",
+        "version": 1,
+        "domain": "dlna_dmr",
+        "title": "Sharp_TV (78:dd:d9:60:d7:10)",
+        "data": {
+          "url": "http://192.168.0.109:57725/aw",
+          "device_id": "uuid:69558180-1dd2-11b2-9451-78ddd9724dc4",
+          "type": "urn:schemas-upnp-org:device:MediaRenderer:1",
+          "mac": null
+        },
+        "options": {
+          "listen_port": null,
+          "callback_url_override": null,
+          "poll_availability": false,
+          "browse_unfiltered": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ssdp",
+        "unique_id": "uuid:69558180-1dd2-11b2-9451-78ddd9724dc4",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "25ff4b8ed7df8f146f0a0f6dad7cc248",
+        "version": 1,
+        "domain": "mobile_app",
+        "title": "iPhone kuba",
+        "data": {
+          "app_data": {
+            "push_url": "https://mobile-apps.home-assistant.io/api/sendPushNotification",
+            "push_token": "cpQp4Lfm90ptouQsIHPcsP:APA91bEOz2o9pi3cG4r1I9fBw8LcqehVunRn0rlSa6IPdbfx1SNdhrhCrrNY1JU-pQj-qbCpcIhGCKFuCH21a70ry17jgTZygtkossxM3URxjAMckfnnZA8slNYl-KOVQZWIIOcKiMjt"
+          },
+          "os_version": "16.5",
+          "os_name": "iOS",
+          "device_id": "17823513-29F6-485D-8B09-3E2252386351",
+          "app_version": "2023.4 (2023.460)",
+          "app_name": "Home Assistant",
+          "supports_encryption": true,
+          "manufacturer": "Apple",
+          "app_id": "io.robbie.HomeAssistant",
+          "device_name": "iPhone kuba",
+          "model": "iPhone11,2",
+          "webhook_id": "340ec779c541fe1e2ddcf0062ca83c282b362bfdf04a1d35794060e70a6c6ab1",
+          "secret": "18e12374e8317ed9e9b95fb068f0cad5e02cf33c00f618fefd238e692ce7f27b",
+          "user_id": "48ce88ac754345008ac1af40e7621557",
+          "no_legacy_encryption": true
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "registration",
+        "unique_id": "io.robbie.HomeAssistant-17823513-29F6-485D-8B09-3E2252386351",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "b26611603235707767d88563d42fbc9a",
+        "version": 1,
+        "domain": "hacs",
+        "title": "",
+        "data": {
+          "token": "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"
+        },
+        "options": {
+          "sidepanel_title": "HACS",
+          "sidepanel_icon": "hacs:hacs",
+          "release_limit": 5,
+          "country": "ALL",
+          "appdaemon": true,
+          "netdaemon": false,
+          "debug": false,
+          "experimental": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
         "disabled_by": null
       }
     ]

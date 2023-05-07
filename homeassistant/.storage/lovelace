@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Home",
+          "icon": "",
+          "badges": [],
+          "cards": [
+            {
+              "type": "media-control",
+              "entity": "media_player.pendrive_mi_tv"
+            },
+            {
+              "type": "gauge",
+              "entity": "sensor.disk_use_percent_config"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.dashboard_test",
+  "data": {
+    "config": {
+      "title": "Home",
+      "views": [
+        {
+          "type": "custom:masonry-layout",
+          "title": "Test",
+          "path": "test",
+          "badges": [],
+          "cards": [
+            {
+              "type": "media-control",
+              "entity": "media_player.sharp_tv_78_dd_d9_60_d7_10",
+              "theme": "tablet"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

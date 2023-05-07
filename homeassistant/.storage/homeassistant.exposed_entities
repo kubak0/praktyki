@@ -25,6 +25,27 @@
             "should_expose": false
           }
         }
+      },
+      "persistent_notification.invalid_config": {
+        "assistants": {
+          "conversation": {
+            "should_expose": false
+          }
+        }
+      },
+      "persistent_notification.http_login": {
+        "assistants": {
+          "conversation": {
+            "should_expose": false
+          }
+        }
+      },
+      "persistent_notification.homeassistant_check_config": {
+        "assistants": {
+          "conversation": {
+            "should_expose": false
+          }
+        }
       }
     }
   }

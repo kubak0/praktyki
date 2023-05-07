@@ -8,7 +8,9 @@
         "id": "kuba",
         "name": "kuba",
         "user_id": "48ce88ac754345008ac1af40e7621557",
-        "device_trackers": []
+        "device_trackers": [
+          "device_tracker.iphone_kuba"
+        ]
       }
     ]
   }

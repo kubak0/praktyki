@@ -1,15 +1,887 @@
-2023-05-06 21:52:55.301 WARNING (MainThread) [homeassistant.setup] Setup of ssdp is taking over 10 seconds.
-2023-05-06 21:53:17.586 WARNING (MainThread) [homeassistant.setup] Setup of input_boolean is taking over 10 seconds.
-2023-05-06 21:53:17.586 WARNING (MainThread) [homeassistant.setup] Setup of input_text is taking over 10 seconds.
-2023-05-06 21:53:17.586 WARNING (MainThread) [homeassistant.setup] Setup of input_button is taking over 10 seconds.
-2023-05-06 21:53:17.587 WARNING (MainThread) [homeassistant.setup] Setup of application_credentials is taking over 10 seconds.
-2023-05-06 21:53:17.588 WARNING (MainThread) [homeassistant.setup] Setup of automation is taking over 10 seconds.
-2023-05-06 21:53:17.588 WARNING (MainThread) [homeassistant.setup] Setup of script is taking over 10 seconds.
-2023-05-06 21:54:15.004 WARNING (zeroconf-ServiceBrowser-_googlecast._tcp-126) [pychromecast.dial] Failed to determine cast type for host <unknown> (<urlopen error [Errno 113] Host is unreachable>) (services:{ServiceInfo(type='mdns', data='MiTV-AESP0-1b11252874c5df8c656288f3ba91f562._googlecast._tcp.local.')})
-2023-05-06 21:54:18.077 ERROR (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Failed to connect to service ServiceInfo(type='mdns', data='MiTV-AESP0-1b11252874c5df8c656288f3ba91f562._googlecast._tcp.local.'), retrying in 5.0s
-2023-05-06 21:54:55.157 ERROR (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Error reading from socket.
-2023-05-06 21:54:55.157 WARNING (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Error communicating with socket, resetting connection
-2023-05-06 21:54:55.169 ERROR (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Failed to connect to service ServiceInfo(type='mdns', data='MiTV-AESP0-1b11252874c5df8c656288f3ba91f562._googlecast._tcp.local.'), retrying in 5.0s
-2023-05-06 21:56:04.076 ERROR (Thread-5 (_thread_main)) [paho.mqtt.client] failed to receive on socket: [Errno 104] Connection reset by peer
-2023-05-06 21:56:05.156 ERROR (Thread-5 (_thread_main)) [paho.mqtt.client] failed to receive on socket: [Errno 104] Connection reset by peer
-2023-05-06 21:56:07.235 ERROR (Thread-5 (_thread_main)) [paho.mqtt.client] failed to receive on socket: [Errno 104] Connection reset by peer
+2023-05-07 03:06:16.734 WARNING (SyncWorker_0) [homeassistant.util.yaml.loader] YAML file /config/configuration.yaml contains duplicate key "frontend". Check lines 5 and 54
+2023-05-07 03:06:16.771 WARNING (SyncWorker_2) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-05-07 03:06:28.070 WARNING (MainThread) [homeassistant.components.media_player] Setup of media_player platform dlna_dmr is taking over 10 seconds.
+2023-05-07 03:06:33.080 ERROR (MainThread) [homeassistant.helpers.event] Error while processing template: Template<template=(<font color='#6a7377'><b> {% if strptime(states('sensor.date'), '%Y-%m-%d').day != None %} {% set days = ['Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag', 'Söndag'] %} {% set months = ['Januari', 'Februari', 'Mars', 'April', 'Maj', 'Juni', 'Juli', 'Augusti', 'September', 'Oktober', 'November', 'December'] %}
+  {{ days[now().weekday()] }}<br>
+  {{ strptime(states('sensor.date'), '%Y-%m-%d').day }} {{ months[now().month-1] }}
+{% endif %} </b></font>) renders=2>
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 1814, in strptime
+    return datetime.strptime(string, fmt)
+  File "/usr/local/lib/python3.10/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.10/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'unknown' does not match format '%Y-%m-%d'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 544, in async_render
+    render_result = _render_with_context(self.template, compiled, **kwargs)
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2164, in _render_with_context
+    return template.render(**kwargs)
+  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<template>", line 1, in top-level template code
+  File "/usr/local/lib/python3.10/site-packages/jinja2/sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 1817, in strptime
+    raise_no_default("strptime", string)
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 1594, in raise_no_default
+    raise ValueError(
+ValueError: Template error: strptime got invalid input 'unknown' when rendering template '<font color='#6a7377'><b> {% if strptime(states('sensor.date'), '%Y-%m-%d').day != None %} {% set days = ['Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag', 'Söndag'] %} {% set months = ['Januari', 'Februari', 'Mars', 'April', 'Maj', 'Juni', 'Juli', 'Augusti', 'September', 'Oktober', 'November', 'December'] %}
+  {{ days[now().weekday()] }}<br>
+  {{ strptime(states('sensor.date'), '%Y-%m-%d').day }} {{ months[now().month-1] }}
+{% endif %} </b></font>' but no default was specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 665, in async_render_to_info
+    render_info._result = self.async_render(variables, strict=strict, **kwargs)
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 546, in async_render
+    raise TemplateError(err) from err
+homeassistant.exceptions.TemplateError: ValueError: Template error: strptime got invalid input 'unknown' when rendering template '<font color='#6a7377'><b> {% if strptime(states('sensor.date'), '%Y-%m-%d').day != None %} {% set days = ['Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag', 'Söndag'] %} {% set months = ['Januari', 'Februari', 'Mars', 'April', 'Maj', 'Juni', 'Juli', 'Augusti', 'September', 'Oktober', 'November', 'December'] %}
+  {{ days[now().weekday()] }}<br>
+  {{ strptime(states('sensor.date'), '%Y-%m-%d').day }} {{ months[now().month-1] }}
+{% endif %} </b></font>' but no default was specified
+2023-05-07 03:06:33.082 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'None' has no attribute 'state' when rendering '<b> {% set lights = [
+  states.light.vardagsrum_tv,
+  states.light.vardagsrum_golv,
+  states.light.vardagsrum_horna,
+  states.light.studio_dator,
+  states.light.badrum_vask_2,
+  states.light.badrum_vask_1,
+  states.light.sovrum_tv,
+  states.light.garderob_lampa,
+  states.light.hall_spot_1,
+  states.light.hall_spot_2,
+  states.light.hall_spot_3,
+  states.light.sovrum_mattias,
+  states.light.sovrum_sanja,
+  states.light.studio_spot_1,
+  states.light.studio_spot_2,
+  states.switch.deltaco_sh_p01_socket
+] %}
+{% set devices = [
+  states.switch.imac,
+  states.switch.ps5_635_power,
+  states.switch.gosund_monitors_switch,
+  states.switch.gosund_fan_switch,
+  states.media_player.samsung,
+  states.media_player.sony_bravia_tv,
+  states.climate.ac
+] %}
+{% set lights_on = lights | selectattr('state','eq','on') | list %} {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+{% set devices_on = devices | selectattr('state','search','(on|cool|fan_only|playing)') | list %} {% set devices_name = devices_on | map(attribute='name') | join(', ') %}
+{% if (lights_on | length == 0) and (devices_on | length > 0) %}
+  {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 1) %}
+  {{ lights_name }} och {{devices_name }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length > 1) %}
+  {{ lights_name }}, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 1) %}
+  {{ lights_on | length }} lampor och {{ devices_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length > 1) %}
+  {{ lights_on | length }} lampor, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 0) %}
+  {{ lights_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 0) %}
+  {{ lights_on | length }} lampor är på
+
+{% else %}
+  <font color='#6a7377'>Allt är avstängt</font>
+{% endif %} </b>'
+2023-05-07 03:06:33.083 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'None' has no attribute 'state' when rendering '<b> {% set lights = [
+  states.light.vardagsrum_tv,
+  states.light.vardagsrum_golv,
+  states.light.vardagsrum_horna,
+  states.light.studio_dator,
+  states.light.badrum_vask_2,
+  states.light.badrum_vask_1,
+  states.light.sovrum_tv,
+  states.light.garderob_lampa,
+  states.light.hall_spot_1,
+  states.light.hall_spot_2,
+  states.light.hall_spot_3,
+  states.light.sovrum_mattias,
+  states.light.sovrum_sanja,
+  states.light.studio_spot_1,
+  states.light.studio_spot_2,
+  states.switch.deltaco_sh_p01_socket
+] %}
+{% set devices = [
+  states.switch.imac,
+  states.switch.ps5_635_power,
+  states.switch.gosund_monitors_switch,
+  states.switch.gosund_fan_switch,
+  states.media_player.samsung,
+  states.media_player.sony_bravia_tv,
+  states.climate.ac
+] %}
+{% set lights_on = lights | selectattr('state','eq','on') | list %} {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+{% set devices_on = devices | selectattr('state','search','(on|cool|fan_only|playing)') | list %} {% set devices_name = devices_on | map(attribute='name') | join(', ') %}
+{% if (lights_on | length == 0) and (devices_on | length > 0) %}
+  {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 1) %}
+  {{ lights_name }} och {{devices_name }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length > 1) %}
+  {{ lights_name }}, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 1) %}
+  {{ lights_on | length }} lampor och {{ devices_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length > 1) %}
+  {{ lights_on | length }} lampor, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 0) %}
+  {{ lights_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 0) %}
+  {{ lights_on | length }} lampor är på
+
+{% else %}
+  <font color='#6a7377'>Allt är avstängt</font>
+{% endif %} </b>'
+2023-05-07 03:06:33.084 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'None' has no attribute 'state' when rendering '<b> {% set lights = [
+  states.light.vardagsrum_tv,
+  states.light.vardagsrum_golv,
+  states.light.vardagsrum_horna,
+  states.light.studio_dator,
+  states.light.badrum_vask_2,
+  states.light.badrum_vask_1,
+  states.light.sovrum_tv,
+  states.light.garderob_lampa,
+  states.light.hall_spot_1,
+  states.light.hall_spot_2,
+  states.light.hall_spot_3,
+  states.light.sovrum_mattias,
+  states.light.sovrum_sanja,
+  states.light.studio_spot_1,
+  states.light.studio_spot_2,
+  states.switch.deltaco_sh_p01_socket
+] %}
+{% set devices = [
+  states.switch.imac,
+  states.switch.ps5_635_power,
+  states.switch.gosund_monitors_switch,
+  states.switch.gosund_fan_switch,
+  states.media_player.samsung,
+  states.media_player.sony_bravia_tv,
+  states.climate.ac
+] %}
+{% set lights_on = lights | selectattr('state','eq','on') | list %} {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+{% set devices_on = devices | selectattr('state','search','(on|cool|fan_only|playing)') | list %} {% set devices_name = devices_on | map(attribute='name') | join(', ') %}
+{% if (lights_on | length == 0) and (devices_on | length > 0) %}
+  {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 1) %}
+  {{ lights_name }} och {{devices_name }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length > 1) %}
+  {{ lights_name }}, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 1) %}
+  {{ lights_on | length }} lampor och {{ devices_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length > 1) %}
+  {{ lights_on | length }} lampor, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 0) %}
+  {{ lights_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 0) %}
+  {{ lights_on | length }} lampor är på
+
+{% else %}
+  <font color='#6a7377'>Allt är avstängt</font>
+{% endif %} </b>'
+2023-05-07 03:06:33.084 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'None' has no attribute 'state' when rendering '<b> {% set lights = [
+  states.light.vardagsrum_tv,
+  states.light.vardagsrum_golv,
+  states.light.vardagsrum_horna,
+  states.light.studio_dator,
+  states.light.badrum_vask_2,
+  states.light.badrum_vask_1,
+  states.light.sovrum_tv,
+  states.light.garderob_lampa,
+  states.light.hall_spot_1,
+  states.light.hall_spot_2,
+  states.light.hall_spot_3,
+  states.light.sovrum_mattias,
+  states.light.sovrum_sanja,
+  states.light.studio_spot_1,
+  states.light.studio_spot_2,
+  states.switch.deltaco_sh_p01_socket
+] %}
+{% set devices = [
+  states.switch.imac,
+  states.switch.ps5_635_power,
+  states.switch.gosund_monitors_switch,
+  states.switch.gosund_fan_switch,
+  states.media_player.samsung,
+  states.media_player.sony_bravia_tv,
+  states.climate.ac
+] %}
+{% set lights_on = lights | selectattr('state','eq','on') | list %} {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+{% set devices_on = devices | selectattr('state','search','(on|cool|fan_only|playing)') | list %} {% set devices_name = devices_on | map(attribute='name') | join(', ') %}
+{% if (lights_on | length == 0) and (devices_on | length > 0) %}
+  {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 1) %}
+  {{ lights_name }} och {{devices_name }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length > 1) %}
+  {{ lights_name }}, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 1) %}
+  {{ lights_on | length }} lampor och {{ devices_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length > 1) %}
+  {{ lights_on | length }} lampor, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 0) %}
+  {{ lights_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 0) %}
+  {{ lights_on | length }} lampor är på
+
+{% else %}
+  <font color='#6a7377'>Allt är avstängt</font>
+{% endif %} </b>'
+2023-05-07 03:06:33.085 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'None' has no attribute 'state' when rendering '<b> {% set lights = [
+  states.light.vardagsrum_tv,
+  states.light.vardagsrum_golv,
+  states.light.vardagsrum_horna,
+  states.light.studio_dator,
+  states.light.badrum_vask_2,
+  states.light.badrum_vask_1,
+  states.light.sovrum_tv,
+  states.light.garderob_lampa,
+  states.light.hall_spot_1,
+  states.light.hall_spot_2,
+  states.light.hall_spot_3,
+  states.light.sovrum_mattias,
+  states.light.sovrum_sanja,
+  states.light.studio_spot_1,
+  states.light.studio_spot_2,
+  states.switch.deltaco_sh_p01_socket
+] %}
+{% set devices = [
+  states.switch.imac,
+  states.switch.ps5_635_power,
+  states.switch.gosund_monitors_switch,
+  states.switch.gosund_fan_switch,
+  states.media_player.samsung,
+  states.media_player.sony_bravia_tv,
+  states.climate.ac
+] %}
+{% set lights_on = lights | selectattr('state','eq','on') | list %} {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+{% set devices_on = devices | selectattr('state','search','(on|cool|fan_only|playing)') | list %} {% set devices_name = devices_on | map(attribute='name') | join(', ') %}
+{% if (lights_on | length == 0) and (devices_on | length > 0) %}
+  {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 1) %}
+  {{ lights_name }} och {{devices_name }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length > 1) %}
+  {{ lights_name }}, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 1) %}
+  {{ lights_on | length }} lampor och {{ devices_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length > 1) %}
+  {{ lights_on | length }} lampor, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 0) %}
+  {{ lights_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 0) %}
+  {{ lights_on | length }} lampor är på
+
+{% else %}
+  <font color='#6a7377'>Allt är avstängt</font>
+{% endif %} </b>'
+2023-05-07 03:06:33.085 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'None' has no attribute 'state' when rendering '<b> {% set lights = [
+  states.light.vardagsrum_tv,
+  states.light.vardagsrum_golv,
+  states.light.vardagsrum_horna,
+  states.light.studio_dator,
+  states.light.badrum_vask_2,
+  states.light.badrum_vask_1,
+  states.light.sovrum_tv,
+  states.light.garderob_lampa,
+  states.light.hall_spot_1,
+  states.light.hall_spot_2,
+  states.light.hall_spot_3,
+  states.light.sovrum_mattias,
+  states.light.sovrum_sanja,
+  states.light.studio_spot_1,
+  states.light.studio_spot_2,
+  states.switch.deltaco_sh_p01_socket
+] %}
+{% set devices = [
+  states.switch.imac,
+  states.switch.ps5_635_power,
+  states.switch.gosund_monitors_switch,
+  states.switch.gosund_fan_switch,
+  states.media_player.samsung,
+  states.media_player.sony_bravia_tv,
+  states.climate.ac
+] %}
+{% set lights_on = lights | selectattr('state','eq','on') | list %} {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+{% set devices_on = devices | selectattr('state','search','(on|cool|fan_only|playing)') | list %} {% set devices_name = devices_on | map(attribute='name') | join(', ') %}
+{% if (lights_on | length == 0) and (devices_on | length > 0) %}
+  {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 1) %}
+  {{ lights_name }} och {{devices_name }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length > 1) %}
+  {{ lights_name }}, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 1) %}
+  {{ lights_on | length }} lampor och {{ devices_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length > 1) %}
+  {{ lights_on | length }} lampor, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 0) %}
+  {{ lights_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 0) %}
+  {{ lights_on | length }} lampor är på
+
+{% else %}
+  <font color='#6a7377'>Allt är avstängt</font>
+{% endif %} </b>'
+2023-05-07 03:06:33.086 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'None' has no attribute 'state' when rendering '<b> {% set lights = [
+  states.light.vardagsrum_tv,
+  states.light.vardagsrum_golv,
+  states.light.vardagsrum_horna,
+  states.light.studio_dator,
+  states.light.badrum_vask_2,
+  states.light.badrum_vask_1,
+  states.light.sovrum_tv,
+  states.light.garderob_lampa,
+  states.light.hall_spot_1,
+  states.light.hall_spot_2,
+  states.light.hall_spot_3,
+  states.light.sovrum_mattias,
+  states.light.sovrum_sanja,
+  states.light.studio_spot_1,
+  states.light.studio_spot_2,
+  states.switch.deltaco_sh_p01_socket
+] %}
+{% set devices = [
+  states.switch.imac,
+  states.switch.ps5_635_power,
+  states.switch.gosund_monitors_switch,
+  states.switch.gosund_fan_switch,
+  states.media_player.samsung,
+  states.media_player.sony_bravia_tv,
+  states.climate.ac
+] %}
+{% set lights_on = lights | selectattr('state','eq','on') | list %} {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+{% set devices_on = devices | selectattr('state','search','(on|cool|fan_only|playing)') | list %} {% set devices_name = devices_on | map(attribute='name') | join(', ') %}
+{% if (lights_on | length == 0) and (devices_on | length > 0) %}
+  {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 1) %}
+  {{ lights_name }} och {{devices_name }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length > 1) %}
+  {{ lights_name }}, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 1) %}
+  {{ lights_on | length }} lampor och {{ devices_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length > 1) %}
+  {{ lights_on | length }} lampor, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 0) %}
+  {{ lights_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 0) %}
+  {{ lights_on | length }} lampor är på
+
+{% else %}
+  <font color='#6a7377'>Allt är avstängt</font>
+{% endif %} </b>'
+2023-05-07 03:06:33.087 ERROR (MainThread) [homeassistant.helpers.event] Error while processing template: Template<template=({% set entity = 'weather.smhi_home' %} {% if not is_state(entity, 'unknown') %}
+  {% set temp = state_attr(entity, 'temperature') | round %}
+  {% set precip = state_attr(entity, 'forecast')[0]['precipitation'] | round %}
+    Känns som {{ temp }}° med {{ 'ingen risk för regn' if precip == 0
+    else precip | string + 'mm regn \u2614\uFE0F' }}
+{% else %}
+  Kan inte läsa in väder...
+{% endif %}) renders=2>
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 1613, in forgiving_round
+    value = round(float(value), precision)
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 544, in async_render
+    render_result = _render_with_context(self.template, compiled, **kwargs)
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2164, in _render_with_context
+    return template.render(**kwargs)
+  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<template>", line 2, in top-level template code
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 1618, in forgiving_round
+    raise_no_default("round", value)
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 1594, in raise_no_default
+    raise ValueError(
+ValueError: Template error: round got invalid input 'None' when rendering template '{% set entity = 'weather.smhi_home' %} {% if not is_state(entity, 'unknown') %}
+  {% set temp = state_attr(entity, 'temperature') | round %}
+  {% set precip = state_attr(entity, 'forecast')[0]['precipitation'] | round %}
+    Känns som {{ temp }}° med {{ 'ingen risk för regn' if precip == 0
+    else precip | string + 'mm regn \u2614\uFE0F' }}
+{% else %}
+  Kan inte läsa in väder...
+{% endif %}' but no default was specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 665, in async_render_to_info
+    render_info._result = self.async_render(variables, strict=strict, **kwargs)
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 546, in async_render
+    raise TemplateError(err) from err
+homeassistant.exceptions.TemplateError: ValueError: Template error: round got invalid input 'None' when rendering template '{% set entity = 'weather.smhi_home' %} {% if not is_state(entity, 'unknown') %}
+  {% set temp = state_attr(entity, 'temperature') | round %}
+  {% set precip = state_attr(entity, 'forecast')[0]['precipitation'] | round %}
+    Känns som {{ temp }}° med {{ 'ingen risk för regn' if precip == 0
+    else precip | string + 'mm regn \u2614\uFE0F' }}
+{% else %}
+  Kan inte läsa in väder...
+{% endif %}' but no default was specified
+2023-05-07 03:06:33.090 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'None' has no attribute 'state' when rendering '<b> {% set lights = [
+  states.light.vardagsrum_tv,
+  states.light.vardagsrum_golv,
+  states.light.vardagsrum_horna,
+  states.light.studio_dator,
+  states.light.badrum_vask_2,
+  states.light.badrum_vask_1,
+  states.light.sovrum_tv,
+  states.light.garderob_lampa,
+  states.light.hall_spot_1,
+  states.light.hall_spot_2,
+  states.light.hall_spot_3,
+  states.light.sovrum_mattias,
+  states.light.sovrum_sanja,
+  states.light.studio_spot_1,
+  states.light.studio_spot_2,
+  states.switch.deltaco_sh_p01_socket
+] %}
+{% set devices = [
+  states.switch.imac,
+  states.switch.ps5_635_power,
+  states.switch.gosund_monitors_switch,
+  states.switch.gosund_fan_switch,
+  states.media_player.samsung,
+  states.media_player.sony_bravia_tv,
+  states.climate.ac
+] %}
+{% set lights_on = lights | selectattr('state','eq','on') | list %} {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+{% set devices_on = devices | selectattr('state','search','(on|cool|fan_only|playing)') | list %} {% set devices_name = devices_on | map(attribute='name') | join(', ') %}
+{% if (lights_on | length == 0) and (devices_on | length > 0) %}
+  {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 1) %}
+  {{ lights_name }} och {{devices_name }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length > 1) %}
+  {{ lights_name }}, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 1) %}
+  {{ lights_on | length }} lampor och {{ devices_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length > 1) %}
+  {{ lights_on | length }} lampor, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 0) %}
+  {{ lights_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 0) %}
+  {{ lights_on | length }} lampor är på
+
+{% else %}
+  <font color='#6a7377'>Allt är avstängt</font>
+{% endif %} </b>'
+2023-05-07 03:06:33.091 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'None' has no attribute 'state' when rendering '<b> {% set lights = [
+  states.light.vardagsrum_tv,
+  states.light.vardagsrum_golv,
+  states.light.vardagsrum_horna,
+  states.light.studio_dator,
+  states.light.badrum_vask_2,
+  states.light.badrum_vask_1,
+  states.light.sovrum_tv,
+  states.light.garderob_lampa,
+  states.light.hall_spot_1,
+  states.light.hall_spot_2,
+  states.light.hall_spot_3,
+  states.light.sovrum_mattias,
+  states.light.sovrum_sanja,
+  states.light.studio_spot_1,
+  states.light.studio_spot_2,
+  states.switch.deltaco_sh_p01_socket
+] %}
+{% set devices = [
+  states.switch.imac,
+  states.switch.ps5_635_power,
+  states.switch.gosund_monitors_switch,
+  states.switch.gosund_fan_switch,
+  states.media_player.samsung,
+  states.media_player.sony_bravia_tv,
+  states.climate.ac
+] %}
+{% set lights_on = lights | selectattr('state','eq','on') | list %} {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+{% set devices_on = devices | selectattr('state','search','(on|cool|fan_only|playing)') | list %} {% set devices_name = devices_on | map(attribute='name') | join(', ') %}
+{% if (lights_on | length == 0) and (devices_on | length > 0) %}
+  {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 1) %}
+  {{ lights_name }} och {{devices_name }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length > 1) %}
+  {{ lights_name }}, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 1) %}
+  {{ lights_on | length }} lampor och {{ devices_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length > 1) %}
+  {{ lights_on | length }} lampor, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 0) %}
+  {{ lights_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 0) %}
+  {{ lights_on | length }} lampor är på
+
+{% else %}
+  <font color='#6a7377'>Allt är avstängt</font>
+{% endif %} </b>'
+2023-05-07 03:06:33.091 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'None' has no attribute 'state' when rendering '<b> {% set lights = [
+  states.light.vardagsrum_tv,
+  states.light.vardagsrum_golv,
+  states.light.vardagsrum_horna,
+  states.light.studio_dator,
+  states.light.badrum_vask_2,
+  states.light.badrum_vask_1,
+  states.light.sovrum_tv,
+  states.light.garderob_lampa,
+  states.light.hall_spot_1,
+  states.light.hall_spot_2,
+  states.light.hall_spot_3,
+  states.light.sovrum_mattias,
+  states.light.sovrum_sanja,
+  states.light.studio_spot_1,
+  states.light.studio_spot_2,
+  states.switch.deltaco_sh_p01_socket
+] %}
+{% set devices = [
+  states.switch.imac,
+  states.switch.ps5_635_power,
+  states.switch.gosund_monitors_switch,
+  states.switch.gosund_fan_switch,
+  states.media_player.samsung,
+  states.media_player.sony_bravia_tv,
+  states.climate.ac
+] %}
+{% set lights_on = lights | selectattr('state','eq','on') | list %} {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+{% set devices_on = devices | selectattr('state','search','(on|cool|fan_only|playing)') | list %} {% set devices_name = devices_on | map(attribute='name') | join(', ') %}
+{% if (lights_on | length == 0) and (devices_on | length > 0) %}
+  {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 1) %}
+  {{ lights_name }} och {{devices_name }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length > 1) %}
+  {{ lights_name }}, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 1) %}
+  {{ lights_on | length }} lampor och {{ devices_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length > 1) %}
+  {{ lights_on | length }} lampor, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 0) %}
+  {{ lights_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 0) %}
+  {{ lights_on | length }} lampor är på
+
+{% else %}
+  <font color='#6a7377'>Allt är avstängt</font>
+{% endif %} </b>'
+2023-05-07 03:06:33.092 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'None' has no attribute 'state' when rendering '<b> {% set lights = [
+  states.light.vardagsrum_tv,
+  states.light.vardagsrum_golv,
+  states.light.vardagsrum_horna,
+  states.light.studio_dator,
+  states.light.badrum_vask_2,
+  states.light.badrum_vask_1,
+  states.light.sovrum_tv,
+  states.light.garderob_lampa,
+  states.light.hall_spot_1,
+  states.light.hall_spot_2,
+  states.light.hall_spot_3,
+  states.light.sovrum_mattias,
+  states.light.sovrum_sanja,
+  states.light.studio_spot_1,
+  states.light.studio_spot_2,
+  states.switch.deltaco_sh_p01_socket
+] %}
+{% set devices = [
+  states.switch.imac,
+  states.switch.ps5_635_power,
+  states.switch.gosund_monitors_switch,
+  states.switch.gosund_fan_switch,
+  states.media_player.samsung,
+  states.media_player.sony_bravia_tv,
+  states.climate.ac
+] %}
+{% set lights_on = lights | selectattr('state','eq','on') | list %} {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+{% set devices_on = devices | selectattr('state','search','(on|cool|fan_only|playing)') | list %} {% set devices_name = devices_on | map(attribute='name') | join(', ') %}
+{% if (lights_on | length == 0) and (devices_on | length > 0) %}
+  {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 1) %}
+  {{ lights_name }} och {{devices_name }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length > 1) %}
+  {{ lights_name }}, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 1) %}
+  {{ lights_on | length }} lampor och {{ devices_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length > 1) %}
+  {{ lights_on | length }} lampor, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 0) %}
+  {{ lights_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 0) %}
+  {{ lights_on | length }} lampor är på
+
+{% else %}
+  <font color='#6a7377'>Allt är avstängt</font>
+{% endif %} </b>'
+2023-05-07 03:06:33.092 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'None' has no attribute 'state' when rendering '<b> {% set lights = [
+  states.light.vardagsrum_tv,
+  states.light.vardagsrum_golv,
+  states.light.vardagsrum_horna,
+  states.light.studio_dator,
+  states.light.badrum_vask_2,
+  states.light.badrum_vask_1,
+  states.light.sovrum_tv,
+  states.light.garderob_lampa,
+  states.light.hall_spot_1,
+  states.light.hall_spot_2,
+  states.light.hall_spot_3,
+  states.light.sovrum_mattias,
+  states.light.sovrum_sanja,
+  states.light.studio_spot_1,
+  states.light.studio_spot_2,
+  states.switch.deltaco_sh_p01_socket
+] %}
+{% set devices = [
+  states.switch.imac,
+  states.switch.ps5_635_power,
+  states.switch.gosund_monitors_switch,
+  states.switch.gosund_fan_switch,
+  states.media_player.samsung,
+  states.media_player.sony_bravia_tv,
+  states.climate.ac
+] %}
+{% set lights_on = lights | selectattr('state','eq','on') | list %} {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+{% set devices_on = devices | selectattr('state','search','(on|cool|fan_only|playing)') | list %} {% set devices_name = devices_on | map(attribute='name') | join(', ') %}
+{% if (lights_on | length == 0) and (devices_on | length > 0) %}
+  {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 1) %}
+  {{ lights_name }} och {{devices_name }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length > 1) %}
+  {{ lights_name }}, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 1) %}
+  {{ lights_on | length }} lampor och {{ devices_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length > 1) %}
+  {{ lights_on | length }} lampor, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 0) %}
+  {{ lights_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 0) %}
+  {{ lights_on | length }} lampor är på
+
+{% else %}
+  <font color='#6a7377'>Allt är avstängt</font>
+{% endif %} </b>'
+2023-05-07 03:06:33.093 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'None' has no attribute 'state' when rendering '<b> {% set lights = [
+  states.light.vardagsrum_tv,
+  states.light.vardagsrum_golv,
+  states.light.vardagsrum_horna,
+  states.light.studio_dator,
+  states.light.badrum_vask_2,
+  states.light.badrum_vask_1,
+  states.light.sovrum_tv,
+  states.light.garderob_lampa,
+  states.light.hall_spot_1,
+  states.light.hall_spot_2,
+  states.light.hall_spot_3,
+  states.light.sovrum_mattias,
+  states.light.sovrum_sanja,
+  states.light.studio_spot_1,
+  states.light.studio_spot_2,
+  states.switch.deltaco_sh_p01_socket
+] %}
+{% set devices = [
+  states.switch.imac,
+  states.switch.ps5_635_power,
+  states.switch.gosund_monitors_switch,
+  states.switch.gosund_fan_switch,
+  states.media_player.samsung,
+  states.media_player.sony_bravia_tv,
+  states.climate.ac
+] %}
+{% set lights_on = lights | selectattr('state','eq','on') | list %} {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+{% set devices_on = devices | selectattr('state','search','(on|cool|fan_only|playing)') | list %} {% set devices_name = devices_on | map(attribute='name') | join(', ') %}
+{% if (lights_on | length == 0) and (devices_on | length > 0) %}
+  {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 1) %}
+  {{ lights_name }} och {{devices_name }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length > 1) %}
+  {{ lights_name }}, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 1) %}
+  {{ lights_on | length }} lampor och {{ devices_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length > 1) %}
+  {{ lights_on | length }} lampor, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 0) %}
+  {{ lights_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 0) %}
+  {{ lights_on | length }} lampor är på
+
+{% else %}
+  <font color='#6a7377'>Allt är avstängt</font>
+{% endif %} </b>'
+2023-05-07 03:06:33.093 WARNING (MainThread) [homeassistant.helpers.template] Template variable warning: 'None' has no attribute 'state' when rendering '<b> {% set lights = [
+  states.light.vardagsrum_tv,
+  states.light.vardagsrum_golv,
+  states.light.vardagsrum_horna,
+  states.light.studio_dator,
+  states.light.badrum_vask_2,
+  states.light.badrum_vask_1,
+  states.light.sovrum_tv,
+  states.light.garderob_lampa,
+  states.light.hall_spot_1,
+  states.light.hall_spot_2,
+  states.light.hall_spot_3,
+  states.light.sovrum_mattias,
+  states.light.sovrum_sanja,
+  states.light.studio_spot_1,
+  states.light.studio_spot_2,
+  states.switch.deltaco_sh_p01_socket
+] %}
+{% set devices = [
+  states.switch.imac,
+  states.switch.ps5_635_power,
+  states.switch.gosund_monitors_switch,
+  states.switch.gosund_fan_switch,
+  states.media_player.samsung,
+  states.media_player.sony_bravia_tv,
+  states.climate.ac
+] %}
+{% set lights_on = lights | selectattr('state','eq','on') | list %} {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+{% set devices_on = devices | selectattr('state','search','(on|cool|fan_only|playing)') | list %} {% set devices_name = devices_on | map(attribute='name') | join(', ') %}
+{% if (lights_on | length == 0) and (devices_on | length > 0) %}
+  {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 1) %}
+  {{ lights_name }} och {{devices_name }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length > 1) %}
+  {{ lights_name }}, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 1) %}
+  {{ lights_on | length }} lampor och {{ devices_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length > 1) %}
+  {{ lights_on | length }} lampor, {{ devices_name | regex_replace(',([^,]*)$',' och\\1') }} är på
+
+{% elif (lights_on | length == 1) and (devices_on | length == 0) %}
+  {{ lights_name }} är på
+
+{% elif (lights_on | length > 1) and (devices_on | length == 0) %}
+  {{ lights_on | length }} lampor är på
+
+{% else %}
+  <font color='#6a7377'>Allt är avstängt</font>
+{% endif %} </b>'
+2023-05-07 03:06:33.094 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('ValueError: Template error: strptime got invalid input 'unknown' when rendering template '<font color='#6a7377'><b> {% if strptime(states('sensor.date'), '%Y-%m-%d').day != None %} {% set days = ['Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag', 'Söndag'] %} {% set months = ['Januari', 'Februari', 'Mars', 'April', 'Maj', 'Juni', 'Juli', 'Augusti', 'September', 'Oktober', 'November', 'December'] %}
+  {{ days[now().weekday()] }}<br>
+  {{ strptime(states('sensor.date'), '%Y-%m-%d').day }} {{ months[now().month-1] }}
+{% endif %} </b></font>' but no default was specified') while processing template 'Template<template=(<font color='#6a7377'><b> {% if strptime(states('sensor.date'), '%Y-%m-%d').day != None %} {% set days = ['Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag', 'Söndag'] %} {% set months = ['Januari', 'Februari', 'Mars', 'April', 'Maj', 'Juni', 'Juli', 'Augusti', 'September', 'Oktober', 'November', 'December'] %}
+  {{ days[now().weekday()] }}<br>
+  {{ strptime(states('sensor.date'), '%Y-%m-%d').day }} {{ months[now().month-1] }}
+{% endif %} </b></font>) renders=4>' for attribute 'date' in entity 'sensor.template_sidebar'
+2023-05-07 03:06:33.095 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('ValueError: Template error: round got invalid input 'None' when rendering template '{% set entity = 'weather.smhi_home' %} {% if not is_state(entity, 'unknown') %}
+  {% set temp = state_attr(entity, 'temperature') | round %}
+  {% set precip = state_attr(entity, 'forecast')[0]['precipitation'] | round %}
+    Känns som {{ temp }}° med {{ 'ingen risk för regn' if precip == 0
+    else precip | string + 'mm regn \u2614\uFE0F' }}
+{% else %}
+  Kan inte läsa in väder...
+{% endif %}' but no default was specified') while processing template 'Template<template=({% set entity = 'weather.smhi_home' %} {% if not is_state(entity, 'unknown') %}
+  {% set temp = state_attr(entity, 'temperature') | round %}
+  {% set precip = state_attr(entity, 'forecast')[0]['precipitation'] | round %}
+    Känns som {{ temp }}° med {{ 'ingen risk för regn' if precip == 0
+    else precip | string + 'mm regn \u2614\uFE0F' }}
+{% else %}
+  Kan inte läsa in väder...
+{% endif %}) renders=4>' for attribute 'weather' in entity 'sensor.template_sidebar'
+2023-05-07 03:07:05.309 ERROR (MainThread) [frontend.js.latest.202305033] http://localhost:8123/hacsfiles/button-card/button-card.js:1:30302 TypeError: t.states[e] is undefined
+2023-05-07 03:07:15.980 WARNING (MainThread) [homeassistant.helpers.entity_component] Forced update failed. Entity sensor.udm_unifios not found.
+2023-05-07 03:07:19.910 ERROR (MainThread) [frontend.js.latest.202305033] http://localhost:8123/hacsfiles/button-card/button-card.js:1:30302 TypeError: t.states[e] is undefined
+2023-05-07 03:07:21.755 ERROR (MainThread) [frontend.js.latest.202305033] http://localhost:8123/hacsfiles/button-card/button-card.js:1:30302 TypeError: t.states[e] is undefined
+2023-05-07 03:07:41.009 ERROR (MainThread) [frontend.js.latest.202305033] http://192.168.0.112:8123/hacsfiles/button-card/button-card.js:1:30587 TypeError: undefined is not an object (evaluating 't.states[e].state')
+2023-05-07 03:07:59.879 ERROR (MainThread) [frontend.js.latest.202305033] :0:0 Script error.
+2023-05-07 03:08:28.229 WARNING (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Heartbeat timeout, resetting connection
+2023-05-07 03:08:58.262 ERROR (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Failed to connect to service ServiceInfo(type='mdns', data='MiTV-AESP0-1b11252874c5df8c656288f3ba91f562._googlecast._tcp.local.'), retrying in 5.0s
+2023-05-07 03:09:25.728 WARNING (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Heartbeat timeout, resetting connection
+2023-05-07 03:09:55.760 ERROR (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Failed to connect to service ServiceInfo(type='mdns', data='MiTV-AESP0-1b11252874c5df8c656288f3ba91f562._googlecast._tcp.local.'), retrying in 5.0s
+2023-05-07 03:10:23.204 WARNING (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Heartbeat timeout, resetting connection
+2023-05-07 03:10:53.556 WARNING (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Heartbeat timeout, resetting connection
+2023-05-07 03:11:23.980 WARNING (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Heartbeat timeout, resetting connection
+2023-05-07 03:11:29.411 WARNING (SyncWorker_2) [homeassistant.util.yaml.loader] YAML file /config/configuration.yaml contains duplicate key "frontend". Check lines 5 and 54
+2023-05-07 03:11:45.637 ERROR (MainThread) [frontend.js.latest.202305033] http://localhost:8123/hacsfiles/button-card/button-card.js:1:30302 TypeError: t.states[e] is undefined
+2023-05-07 03:11:50.323 WARNING (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Heartbeat timeout, resetting connection
+2023-05-07 03:12:10.796 WARNING (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Heartbeat timeout, resetting connection
+2023-05-07 03:12:40.824 ERROR (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Failed to connect to service ServiceInfo(type='mdns', data='MiTV-AESP0-1b11252874c5df8c656288f3ba91f562._googlecast._tcp.local.'), retrying in 5.0s
+2023-05-07 03:13:40.590 WARNING (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Heartbeat timeout, resetting connection
+2023-05-07 03:14:08.121 WARNING (Thread-4) [pychromecast.socket_client] [Pendrive Mi TV(192.168.0.104):8009] Heartbeat timeout, resetting connection
