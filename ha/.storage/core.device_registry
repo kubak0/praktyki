@@ -75,16 +75,16 @@
         "id": "40c37e7dbc241898feb711db309f9a85",
         "identifiers": [
           [
-            "upnp_serial_number",
-            "1.0"
-          ],
-          [
             "upnp",
             "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37::urn:schemas-upnp-org:device:InternetGatewayDevice:1"
           ],
           [
             "upnp_host",
             "192.168.0.1"
+          ],
+          [
+            "upnp_serial_number",
+            "1.0"
           ]
         ],
         "manufacturer": "TP-Link",

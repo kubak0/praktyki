@@ -49,3 +49,8 @@ sensor:
         arg: eth0
       - type: processor_use
       - type: processor_temperature
+
+#DuckDNS
+duckdns:
+  domain: kubahass
+  access_token: 7ece9f12-3896-479a-acc6-490f34bd908d
