@@ -36,6 +36,17 @@
         "name": "Home Assistant Cast",
         "system_generated": true,
         "local_only": false
+      },
+      {
+        "id": "5f83fb53cedf4faba7d05e29668a8d9f",
+        "group_ids": [
+          "system-admin"
+        ],
+        "is_owner": false,
+        "is_active": true,
+        "name": "kuba2",
+        "system_generated": false,
+        "local_only": false
       }
     ],
     "groups": [
@@ -60,6 +71,15 @@
         "auth_provider_id": null,
         "data": {
           "username": "kuba"
+        }
+      },
+      {
+        "id": "7db18ea3e4cc407caaab98e6a7ab2b51",
+        "user_id": "5f83fb53cedf4faba7d05e29668a8d9f",
+        "auth_provider_type": "homeassistant",
+        "auth_provider_id": null,
+        "data": {
+          "username": "kuba2"
         }
       }
     ],
@@ -107,7 +127,7 @@
         "access_token_expiration": 1800.0,
         "token": "d2deb09bf101b4c232aa45a2c42f0e523dee274efd5697162def04447a5d0c2ecaea5c8d44dbab3b90c7cd4e9c6c04caebae75a157bad44ce474a26b9fc2eeaa",
         "jwt_key": "45a41e15708e4c9f72319a07905c371f95821baf668df71d7f439fdb6d6f2f66f8641f5fbbbdfb7a3b14c2682b4cb7657b887cf24a9599e9f268fb29728a8661",
-        "last_used_at": "2023-05-08T07:40:46.537091+00:00",
+        "last_used_at": "2023-05-08T19:31:14.239680+00:00",
         "last_used_ip": "127.0.0.1",
         "credential_id": "dac771f4441c4dfe9f28d44ad6b0d4df",
         "version": "2023.5.2"
@@ -123,7 +143,7 @@
         "access_token_expiration": 1800.0,
         "token": "864e2598af2ed12b63b4353798a6aa12dcc13473ba1a41af50e4991a4da647e3e5c1cce35d64889c291f6d0c31ca5b2195279802f3bdaeea983f28a953079fe0",
         "jwt_key": "504518cac379eb7e5bd72ea017f119d6142b617c29d4ccfb34e5f90f3783cf6f179f111bc6d928f01238f8e18f53884c39ca2922c5be2f8478ec32ceab3e11db",
-        "last_used_at": "2023-05-08T07:51:37.866430+00:00",
+        "last_used_at": "2023-05-08T11:59:55.607571+00:00",
         "last_used_ip": "79.124.126.249",
         "credential_id": "dac771f4441c4dfe9f28d44ad6b0d4df",
         "version": "2023.5.2"
@@ -142,6 +162,22 @@
         "last_used_at": null,
         "last_used_ip": null,
         "credential_id": null,
+        "version": "2023.5.2"
+      },
+      {
+        "id": "227630bc54a74a1aba0bce79d5a71790",
+        "user_id": "5f83fb53cedf4faba7d05e29668a8d9f",
+        "client_id": "https://home-assistant.io/iOS",
+        "client_name": null,
+        "client_icon": null,
+        "token_type": "normal",
+        "created_at": "2023-05-08T08:05:25.957892+00:00",
+        "access_token_expiration": 1800.0,
+        "token": "ccb5158bf3b0ce262e2ad5cf9b2525b7881de17067449785d7bf418f23509cb7ff0fad868bf362cf1c80cb83a8c5852b602c7aa2dd0aa15a4e5bc41fb9999fcd",
+        "jwt_key": "094dab8cbaad84c2db69e54278b78caf684893f1cc5e364613276db12df99f3eefa8f32ee6852bddf556f645b8cdb75ab9debcfb145f60fa3c2bd29f9a32a88b",
+        "last_used_at": "2023-05-08T13:04:16.431499+00:00",
+        "last_used_ip": "79.124.126.249",
+        "credential_id": "7db18ea3e4cc407caaab98e6a7ab2b51",
         "version": "2023.5.2"
       }
     ]

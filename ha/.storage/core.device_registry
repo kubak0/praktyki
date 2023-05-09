@@ -75,16 +75,16 @@
         "id": "40c37e7dbc241898feb711db309f9a85",
         "identifiers": [
           [
-            "upnp",
-            "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37::urn:schemas-upnp-org:device:InternetGatewayDevice:1"
-          ],
-          [
             "upnp_host",
             "192.168.0.1"
           ],
           [
             "upnp_serial_number",
             "1.0"
+          ],
+          [
+            "upnp",
+            "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37::urn:schemas-upnp-org:device:InternetGatewayDevice:1"
           ]
         ],
         "manufacturer": "TP-Link",
@@ -111,7 +111,7 @@
             "1b11252874c5df8c656288f3ba91f562"
           ]
         ],
-        "manufacturer": "Xiaomi",
+        "manufacturer": "Unknown manufacturer",
         "model": "MiTV-AESP0",
         "name_by_user": null,
         "name": "Pendrive Mi TV",
@@ -145,6 +145,30 @@
         "name_by_user": null,
         "name": "Pendrive Mi TV",
         "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "d20d49d8abe17e6b624ef226f74ebb48"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "7c00536401d14c51616f86dbb6552fd2",
+        "identifiers": [
+          [
+            "mobile_app",
+            "17823513-29F6-485D-8B09-3E2252386351"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iPhone11,2",
+        "name_by_user": null,
+        "name": "iPhone kuba",
+        "sw_version": "16.5",
         "via_device_id": null
       }
     ],

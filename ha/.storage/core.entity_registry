@@ -1403,6 +1403,557 @@
         "translation_key": null,
         "unique_id": "70:3e:97:6c:43:9d",
         "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "person.kuba2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "89a0ed1e3f8048e3732136e300c0ef2c",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "kuba2",
+        "platform": "person",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "kuba2",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": "diagnostic",
+        "entity_id": "device_tracker.iphone_kuba",
+        "hidden_by": null,
+        "icon": null,
+        "id": "fdfcbea5c27621f880d6eeebb6c5f845",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "iPhone kuba",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "17823513-29F6-485D-8B09-3E2252386351",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.iphone_kuba_activity",
+        "hidden_by": null,
+        "icon": null,
+        "id": "d495dc578c384f74183d073fcc2ea2d9",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:help-circle",
+        "original_name": "iPhone kuba Activity",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_activity",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.iphone_kuba_distance",
+        "hidden_by": null,
+        "icon": null,
+        "id": "0145657b3ce98dbe5d26ef342b81d1dc",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:hiking",
+        "original_name": "iPhone kuba Distance",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_pedometer_distance",
+        "unit_of_measurement": "m"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.iphone_kuba_floors_ascended",
+        "hidden_by": null,
+        "icon": null,
+        "id": "01746b5f7396016ab1d316636626746b",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:stairs-up",
+        "original_name": "iPhone kuba Floors Ascended",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_pedometer_floors_ascended",
+        "unit_of_measurement": "floors"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.iphone_kuba_battery_level",
+        "hidden_by": null,
+        "icon": null,
+        "id": "a9c5b183bce7fcb3a8134dfb34171e81",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "battery",
+        "original_icon": "mdi:battery-90",
+        "original_name": "iPhone kuba Battery Level",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_battery_level",
+        "unit_of_measurement": "%"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.iphone_kuba_battery_state",
+        "hidden_by": null,
+        "icon": null,
+        "id": "19a6a1e497b7e3364e652892d152ff0c",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:battery-90",
+        "original_name": "iPhone kuba Battery State",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_battery_state",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.iphone_kuba_storage",
+        "hidden_by": null,
+        "icon": null,
+        "id": "fd85ce9342cf8eb3eee44db9f06b2424",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:database",
+        "original_name": "iPhone kuba Storage",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_storage",
+        "unit_of_measurement": "% available"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.iphone_kuba_ssid",
+        "hidden_by": null,
+        "icon": null,
+        "id": "d228e311db62c50e633f8b6b4382adf3",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:wifi",
+        "original_name": "iPhone kuba SSID",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_connectivity_ssid",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.iphone_kuba_bssid",
+        "hidden_by": null,
+        "icon": null,
+        "id": "8478447fe0d455913423f5223cc58c22",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:wifi-star",
+        "original_name": "iPhone kuba BSSID",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_connectivity_bssid",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.iphone_kuba_connection_type",
+        "hidden_by": null,
+        "icon": null,
+        "id": "7ceea6184bc8c6df4eccb6e9f33d0d5e",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:wifi",
+        "original_name": "iPhone kuba Connection Type",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_connectivity_connection_type",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.iphone_kuba_sim_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "87d49259af8b988fa9c159d0a0f029a0",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:sim",
+        "original_name": "iPhone kuba SIM 2",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_connectivity_sim_2",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.iphone_kuba_sim_1",
+        "hidden_by": null,
+        "icon": null,
+        "id": "93af25ca38b20e0e343d23cde2873012",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:sim",
+        "original_name": "iPhone kuba SIM 1",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_connectivity_sim_1",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.iphone_kuba_geocoded_location",
+        "hidden_by": null,
+        "icon": null,
+        "id": "ee0143553400885f3902f8c19d956ea7",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:map",
+        "original_name": "iPhone kuba Geocoded Location",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_geocoded_location",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "binary_sensor.iphone_kuba_focus",
+        "hidden_by": null,
+        "icon": null,
+        "id": "38faa209786c23ff41560ed9abd1505f",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:moon-waning-crescent",
+        "original_name": "iPhone kuba Focus",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_focus",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.iphone_kuba_last_update_trigger",
+        "hidden_by": null,
+        "icon": null,
+        "id": "76cbefedda8bfb6a9843cec17cf97f3c",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:cellphone-wireless",
+        "original_name": "iPhone kuba Last Update Trigger",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_last_update_trigger",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.iphone_kuba_floors_descended",
+        "hidden_by": null,
+        "icon": null,
+        "id": "d8f5174ee2be85b6a6eb52fec952e6aa",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:stairs-down",
+        "original_name": "iPhone kuba Floors Descended",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_pedometer_floors_descended",
+        "unit_of_measurement": "floors"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.iphone_kuba_average_active_pace",
+        "hidden_by": null,
+        "icon": null,
+        "id": "0dfb9849c0a8a4dbe9ea316178904d9a",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:speedometer",
+        "original_name": "iPhone kuba Average Active Pace",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_pedometer_avg_active_pace",
+        "unit_of_measurement": "m/s"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d20d49d8abe17e6b624ef226f74ebb48",
+        "device_class": null,
+        "device_id": "7c00536401d14c51616f86dbb6552fd2",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.iphone_kuba_steps",
+        "hidden_by": null,
+        "icon": null,
+        "id": "100e1fd2c979ad66be33cd0bc0354638",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:walk",
+        "original_name": "iPhone kuba Steps",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "f09be33c253031fa2ebd395fae576ff59ce897dda70e507b61f71e4727b3f548_pedometer_steps",
+        "unit_of_measurement": "steps"
       }
     ]
   }

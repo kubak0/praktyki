@@ -9,55 +9,77 @@
         {
           "path": "default_view",
           "title": "PC",
+          "icon": "mdi:laptop",
           "badges": [],
           "cards": [
             {
-              "type": "gauge",
-              "entity": "sensor.processor_temperature",
-              "max": 100,
-              "needle": true,
-              "name": "Temperatura procesora",
-              "severity": {
-                "green": 0,
-                "yellow": 60,
-                "red": 80
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.processor_temperature",
+                  "name": "Temperatura CPU"
+                }
+              ],
+              "header": {
+                "type": "graph",
+                "entity": "sensor.processor_temperature"
               }
             },
             {
-              "type": "gauge",
-              "entity": "sensor.processor_use",
-              "name": "Zużycie procesora",
-              "needle": true
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.processor_use",
+                  "name": "Zuzycie procesora"
+                }
+              ],
+              "header": {
+                "type": "graph",
+                "entity": "sensor.processor_use",
+                "detail": 1
+              }
             },
             {
-              "type": "gauge",
-              "entity": "sensor.disk_free",
-              "needle": true,
-              "severity": {
-                "green": 750,
-                "yellow": 200,
-                "red": 0
-              },
-              "max": 950,
-              "min": 9,
-              "name": "Miejsce na dysku"
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.disk_use_percent_config",
+                  "name": "Zuzycie dysku"
+                }
+              ],
+              "header": {
+                "type": "graph",
+                "entity": "sensor.disk_use_percent_config",
+                "detail": 1
+              }
             },
             {
-              "type": "gauge",
-              "entity": "sensor.disk_use_percent_config",
-              "name": "Zużycie dysku",
-              "needle": true,
-              "max": 100
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.memory_use_percent",
+                  "name": "Zuzycie CPU"
+                }
+              ],
+              "header": {
+                "type": "graph",
+                "entity": "sensor.memory_use_percent"
+              }
             },
             {
-              "type": "gauge",
-              "entity": "sensor.memory_use_percent",
-              "name": "Zużycie RAMU",
-              "needle": true,
-              "severity": {
-                "green": 0,
-                "yellow": 50,
-                "red": 80
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.disk_free",
+                  "name": "Wolne miejsce na dysku",
+                  "secondary_info": "none"
+                }
+              ],
+              "header": {
+                "type": "graph",
+                "entity": "sensor.disk_free",
+                "detail": 1,
+                "hours_to_show": 2
               }
             }
           ]
@@ -65,6 +87,7 @@
         {
           "title": "Dom",
           "path": "dom",
+          "icon": "mdi:greenhouse",
           "badges": [],
           "cards": [
             {
@@ -74,6 +97,39 @@
             {
               "type": "media-control",
               "entity": "media_player.pendrive_mi_tv"
+            }
+          ]
+        },
+        {
+          "title": "Telefon",
+          "path": "telefon",
+          "icon": "mdi:cellphone",
+          "badges": [],
+          "cards": [
+            {
+              "type": "gauge",
+              "entity": "sensor.iphone_kuba_storage",
+              "name": "Miejsce na dysku",
+              "needle": false
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "sensor.iphone_kuba_ssid"
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.iphone_kuba_battery_state",
+                  "secondary_info": "none"
+                },
+                {
+                  "entity": "sensor.iphone_kuba_battery_level",
+                  "name": "Poziom baterii"
+                }
+              ]
             }
           ]
         }
