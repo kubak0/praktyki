@@ -14,16 +14,16 @@
           "device_trackers": [],
           "friendly_name": "kuba"
         },
-        "last_changed": "2023-05-09T17:51:02.760520+00:00",
-        "last_updated": "2023-05-09T17:51:06.840231+00:00",
+        "last_changed": "2023-05-09T18:23:25.371770+00:00",
+        "last_updated": "2023-05-09T18:23:29.816698+00:00",
         "context": {
-          "id": "01H00T6TJRFG4STE1GA89E0ENY",
+          "id": "01H00W240RK33YZF6VXF512F8Z",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": null,
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -42,16 +42,16 @@
           ],
           "friendly_name": "kuba2"
         },
-        "last_changed": "2023-05-09T17:51:02.760563+00:00",
-        "last_updated": "2023-05-09T17:51:06.840321+00:00",
+        "last_changed": "2023-05-09T18:23:25.371812+00:00",
+        "last_updated": "2023-05-09T18:23:29.816807+00:00",
         "context": {
-          "id": "01H00T6TJRACH6Q03KPH7XDP68",
+          "id": "01H00W240RFG4STE1GA89E0ENY",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": null,
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -65,10 +65,10 @@
           "icon": "mdi:help-circle",
           "friendly_name": "iPhone kuba Activity"
         },
-        "last_changed": "2023-05-09T17:51:03.892078+00:00",
-        "last_updated": "2023-05-09T17:51:03.892078+00:00",
+        "last_changed": "2023-05-09T18:23:26.839473+00:00",
+        "last_updated": "2023-05-09T18:23:26.839473+00:00",
         "context": {
-          "id": "01H00T6QPMQM8D07E8FB4XW83N",
+          "id": "01H00W213QQM8D07E8FB4XW83N",
           "parent_id": null,
           "user_id": null
         }
@@ -77,7 +77,7 @@
         "native_value": "Unknown",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -88,10 +88,10 @@
           "icon": "mdi:hiking",
           "friendly_name": "iPhone kuba Distance"
         },
-        "last_changed": "2023-05-09T17:51:03.892147+00:00",
-        "last_updated": "2023-05-09T17:51:03.892147+00:00",
+        "last_changed": "2023-05-09T18:23:26.839546+00:00",
+        "last_updated": "2023-05-09T18:23:26.839546+00:00",
         "context": {
-          "id": "01H00T6QPMMBZ9YXKGCRQE27PX",
+          "id": "01H00W213QMBZ9YXKGCRQE27PX",
           "parent_id": null,
           "user_id": null
         }
@@ -100,7 +100,7 @@
         "native_value": 29,
         "native_unit_of_measurement": "m"
       },
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -111,10 +111,10 @@
           "icon": "mdi:stairs-up",
           "friendly_name": "iPhone kuba Floors Ascended"
         },
-        "last_changed": "2023-05-09T17:51:03.892195+00:00",
-        "last_updated": "2023-05-09T17:51:03.892195+00:00",
+        "last_changed": "2023-05-09T18:23:26.839606+00:00",
+        "last_updated": "2023-05-09T18:23:26.839606+00:00",
         "context": {
-          "id": "01H00T6QPMW7CZNKS8QM88VYZ4",
+          "id": "01H00W213QW7CZNKS8QM88VYZ4",
           "parent_id": null,
           "user_id": null
         }
@@ -123,7 +123,7 @@
         "native_value": 0,
         "native_unit_of_measurement": "floors"
       },
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -135,10 +135,10 @@
           "icon": "mdi:battery-70",
           "friendly_name": "iPhone kuba Battery Level"
         },
-        "last_changed": "2023-05-09T17:51:03.892257+00:00",
-        "last_updated": "2023-05-09T17:51:03.892257+00:00",
+        "last_changed": "2023-05-09T18:23:26.839662+00:00",
+        "last_updated": "2023-05-09T18:23:26.839662+00:00",
         "context": {
-          "id": "01H00T6QPM4JM7ENS5GZPDX4FT",
+          "id": "01H00W213Q4JM7ENS5GZPDX4FT",
           "parent_id": null,
           "user_id": null
         }
@@ -147,7 +147,7 @@
         "native_value": 71,
         "native_unit_of_measurement": "%"
       },
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -158,10 +158,10 @@
           "icon": "mdi:battery-70",
           "friendly_name": "iPhone kuba Battery State"
         },
-        "last_changed": "2023-05-09T17:51:03.892306+00:00",
-        "last_updated": "2023-05-09T17:51:03.892306+00:00",
+        "last_changed": "2023-05-09T18:23:26.839709+00:00",
+        "last_updated": "2023-05-09T18:23:26.839709+00:00",
         "context": {
-          "id": "01H00T6QPME3BAY1TW8F81K1T1",
+          "id": "01H00W213QE3BAY1TW8F81K1T1",
           "parent_id": null,
           "user_id": null
         }
@@ -170,7 +170,7 @@
         "native_value": "Not Charging",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -185,10 +185,10 @@
           "icon": "mdi:database",
           "friendly_name": "iPhone kuba Storage"
         },
-        "last_changed": "2023-05-09T17:51:03.892353+00:00",
-        "last_updated": "2023-05-09T17:51:03.892353+00:00",
+        "last_changed": "2023-05-09T18:23:26.839759+00:00",
+        "last_updated": "2023-05-09T18:23:26.839759+00:00",
         "context": {
-          "id": "01H00T6QPM5XMF3YSR0BYSNFA0",
+          "id": "01H00W213Q5XMF3YSR0BYSNFA0",
           "parent_id": null,
           "user_id": null
         }
@@ -197,7 +197,7 @@
         "native_value": "7.05",
         "native_unit_of_measurement": "% available"
       },
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -207,10 +207,10 @@
           "icon": "mdi:wifi",
           "friendly_name": "iPhone kuba SSID"
         },
-        "last_changed": "2023-05-09T17:51:03.892397+00:00",
-        "last_updated": "2023-05-09T17:51:03.892397+00:00",
+        "last_changed": "2023-05-09T18:23:26.839803+00:00",
+        "last_updated": "2023-05-09T18:23:26.839803+00:00",
         "context": {
-          "id": "01H00T6QPMBX9MVYHYN5KP8332",
+          "id": "01H00W213QBX9MVYHYN5KP8332",
           "parent_id": null,
           "user_id": null
         }
@@ -219,7 +219,7 @@
         "native_value": "Dom_L7",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -229,10 +229,10 @@
           "icon": "mdi:wifi-star",
           "friendly_name": "iPhone kuba BSSID"
         },
-        "last_changed": "2023-05-09T17:51:03.892442+00:00",
-        "last_updated": "2023-05-09T17:51:03.892442+00:00",
+        "last_changed": "2023-05-09T18:23:26.839846+00:00",
+        "last_updated": "2023-05-09T18:23:26.839846+00:00",
         "context": {
-          "id": "01H00T6QPMEZYMXKHBGFAQQA72",
+          "id": "01H00W213QEZYMXKHBGFAQQA72",
           "parent_id": null,
           "user_id": null
         }
@@ -241,7 +241,7 @@
         "native_value": "c0:6:c3:92:22:a3",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -251,10 +251,10 @@
           "icon": "mdi:wifi",
           "friendly_name": "iPhone kuba Connection Type"
         },
-        "last_changed": "2023-05-09T17:51:03.892488+00:00",
-        "last_updated": "2023-05-09T17:51:03.892488+00:00",
+        "last_changed": "2023-05-09T18:23:26.839895+00:00",
+        "last_updated": "2023-05-09T18:23:26.839895+00:00",
         "context": {
-          "id": "01H00T6QPMK1JCA6C7QPS1SG5H",
+          "id": "01H00W213QK1JCA6C7QPS1SG5H",
           "parent_id": null,
           "user_id": null
         }
@@ -263,7 +263,7 @@
         "native_value": "Wi-Fi",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -279,10 +279,10 @@
           "icon": "mdi:sim",
           "friendly_name": "iPhone kuba SIM 2"
         },
-        "last_changed": "2023-05-09T17:51:03.892531+00:00",
-        "last_updated": "2023-05-09T17:51:03.892531+00:00",
+        "last_changed": "2023-05-09T18:23:26.839955+00:00",
+        "last_updated": "2023-05-09T18:23:26.839955+00:00",
         "context": {
-          "id": "01H00T6QPMVWN43G6MWBRJWN6V",
+          "id": "01H00W213QVWN43G6MWBRJWN6V",
           "parent_id": null,
           "user_id": null
         }
@@ -291,7 +291,7 @@
         "native_value": "N/A",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -308,10 +308,10 @@
           "icon": "mdi:sim",
           "friendly_name": "iPhone kuba SIM 1"
         },
-        "last_changed": "2023-05-09T17:51:03.892574+00:00",
-        "last_updated": "2023-05-09T17:51:03.892574+00:00",
+        "last_changed": "2023-05-09T18:23:26.840001+00:00",
+        "last_updated": "2023-05-09T18:23:26.840001+00:00",
         "context": {
-          "id": "01H00T6QPM3JRB3VVMQRJNN3ZM",
+          "id": "01H00W213R3JRB3VVMQRJNN3ZM",
           "parent_id": null,
           "user_id": null
         }
@@ -320,7 +320,7 @@
         "native_value": "Orange",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -351,10 +351,10 @@
           "icon": "mdi:map",
           "friendly_name": "iPhone kuba Geocoded Location"
         },
-        "last_changed": "2023-05-09T17:51:03.892620+00:00",
-        "last_updated": "2023-05-09T17:51:03.892620+00:00",
+        "last_changed": "2023-05-09T18:23:26.840046+00:00",
+        "last_updated": "2023-05-09T18:23:26.840046+00:00",
         "context": {
-          "id": "01H00T6QPM12XV05MKXPRQ32N0",
+          "id": "01H00W213R12XV05MKXPRQ32N0",
           "parent_id": null,
           "user_id": null
         }
@@ -363,7 +363,7 @@
         "native_value": "Lisia 7\n44-207 Rybnik\nPolska",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -373,10 +373,10 @@
           "icon": "mdi:cellphone-wireless",
           "friendly_name": "iPhone kuba Last Update Trigger"
         },
-        "last_changed": "2023-05-09T17:51:03.892663+00:00",
-        "last_updated": "2023-05-09T17:51:03.892663+00:00",
+        "last_changed": "2023-05-09T18:23:26.840094+00:00",
+        "last_updated": "2023-05-09T18:23:26.840094+00:00",
         "context": {
-          "id": "01H00T6QPMESZTDYE09FR2V740",
+          "id": "01H00W213RESZTDYE09FR2V740",
           "parent_id": null,
           "user_id": null
         }
@@ -385,7 +385,7 @@
         "native_value": "Background Fetch",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -396,10 +396,10 @@
           "icon": "mdi:stairs-down",
           "friendly_name": "iPhone kuba Floors Descended"
         },
-        "last_changed": "2023-05-09T17:51:03.892707+00:00",
-        "last_updated": "2023-05-09T17:51:03.892707+00:00",
+        "last_changed": "2023-05-09T18:23:26.840139+00:00",
+        "last_updated": "2023-05-09T18:23:26.840139+00:00",
         "context": {
-          "id": "01H00T6QPM88WH9STDQ2Q3QKG6",
+          "id": "01H00W213R88WH9STDQ2Q3QKG6",
           "parent_id": null,
           "user_id": null
         }
@@ -408,7 +408,7 @@
         "native_value": 0,
         "native_unit_of_measurement": "floors"
       },
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -419,10 +419,10 @@
           "icon": "mdi:speedometer",
           "friendly_name": "iPhone kuba Average Active Pace"
         },
-        "last_changed": "2023-05-09T17:51:03.892750+00:00",
-        "last_updated": "2023-05-09T17:51:03.892750+00:00",
+        "last_changed": "2023-05-09T18:23:26.840182+00:00",
+        "last_updated": "2023-05-09T18:23:26.840182+00:00",
         "context": {
-          "id": "01H00T6QPMG1WJRBV8H4KA875K",
+          "id": "01H00W213RG1WJRBV8H4KA875K",
           "parent_id": null,
           "user_id": null
         }
@@ -431,7 +431,7 @@
         "native_value": 2,
         "native_unit_of_measurement": "m/s"
       },
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -442,10 +442,10 @@
           "icon": "mdi:walk",
           "friendly_name": "iPhone kuba Steps"
         },
-        "last_changed": "2023-05-09T17:51:03.892792+00:00",
-        "last_updated": "2023-05-09T17:51:03.892792+00:00",
+        "last_changed": "2023-05-09T18:23:26.840238+00:00",
+        "last_updated": "2023-05-09T18:23:26.840238+00:00",
         "context": {
-          "id": "01H00T6QPMRJXEAW856ZVDEFRF",
+          "id": "01H00W213RRJXEAW856ZVDEFRF",
           "parent_id": null,
           "user_id": null
         }
@@ -454,7 +454,7 @@
         "native_value": 43,
         "native_unit_of_measurement": "steps"
       },
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -470,16 +470,16 @@
           "vertical_accuracy": 25.41395378112793,
           "friendly_name": "iPhone kuba"
         },
-        "last_changed": "2023-05-09T17:51:03.892909+00:00",
-        "last_updated": "2023-05-09T17:51:03.892909+00:00",
+        "last_changed": "2023-05-09T18:23:26.840349+00:00",
+        "last_updated": "2023-05-09T18:23:26.840349+00:00",
         "context": {
-          "id": "01H00T6QPM0X2F1Q1EFCC0KVR3",
+          "id": "01H00W213R0X2F1Q1EFCC0KVR3",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": null,
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     },
     {
       "state": {
@@ -489,16 +489,16 @@
           "icon": "mdi:moon-waning-crescent",
           "friendly_name": "iPhone kuba Focus"
         },
-        "last_changed": "2023-05-09T17:51:03.898626+00:00",
-        "last_updated": "2023-05-09T17:51:03.898626+00:00",
+        "last_changed": "2023-05-09T18:23:26.851028+00:00",
+        "last_updated": "2023-05-09T18:23:26.851028+00:00",
         "context": {
-          "id": "01H00T6QPTQB7N37TPJ8R6N7M8",
+          "id": "01H00W2143QB7N37TPJ8R6N7M8",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": null,
-      "last_seen": "2023-05-09T17:51:06.840787+00:00"
+      "last_seen": "2023-05-09T18:23:51.512906+00:00"
     }
   ]
 }
