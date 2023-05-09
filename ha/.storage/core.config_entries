@@ -36,7 +36,7 @@
         "domain": "dlna_dmr",
         "title": "Sharp_TV (78:dd:d9:60:d7:10)",
         "data": {
-          "url": "http://192.168.0.109:53513/aw",
+          "url": "http://192.168.0.109:64641/aw",
           "device_id": "uuid:69558180-1dd2-11b2-9451-78ddd9724dc4",
           "type": "urn:schemas-upnp-org:device:MediaRenderer:1",
           "mac": null
