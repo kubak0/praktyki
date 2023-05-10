@@ -13,9 +13,7 @@ services:
     network_mode: host
     labels:
       - "traefik.enable=true"
-      - traefik.http.routers.homeassistant.rule=Host(`grafana.localhost`) && PathPrefix(`/homeassistant`)
-      - traefik.http.services.homeassistant.loadbalancer.server.port=8080
-
+      - "traefik.http.routers.homeassistant.rule=Host(`ha.localhost`)"
   grafana:
     image: grafana/grafana
     container_name: grafana
@@ -32,8 +30,7 @@ services:
       - traefik
     labels:
       - "traefik.enable=true"
-      - traefik.http.routers.grafana.rule=Host(`grafana.localhost`) && PathPrefix(`/grafana`)
-      - traefik.http.services.grafana.loadbalancer.server.port=8080
+      - "traefik.http.routers.grafana.rule=Host(`grafana.localhost`)"
 
 
   influxdb:
@@ -55,15 +52,14 @@ services:
       - INFLUXDB_ADMIN_PASSWORD=admin
     labels:
       - "traefik.enable=true"
-      - traefik.http.routers.influxdb.rule=Host(`influxdb.localhost`) && PathPrefix(`/influxdb`)
-      - traefik.http.services.influxdb.loadbalancer.server.port=8080
+      - "traefik.http.routers.influxdb.rule=Host(`influxdb.localhost`)"
     depends_on:
       - traefik
   
   traefik:
     image: "traefik:v2.10"
     container_name: "traefik"
-    command: --api.insecure=true --providers.docker=true
+    command: --api.insecure=true --providers.docker
     ports:
       - "80:80"
       - "8080:8080"
