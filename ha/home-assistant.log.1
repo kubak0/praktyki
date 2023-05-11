@@ -1,5 +1,19 @@
-2023-05-11 00:42:39.260 ERROR (SyncWorker_1) [homeassistant.components.influxdb] InfluxDB database is not accessible due to '401: {"code":"unauthorized","message":"Unauthorized"}'. Please check that the database, username and password are correct and that the specified user has the correct permissions set. Retrying in 60 seconds.
-2023-05-11 00:42:42.395 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Pendrive Mi TV' for androidtv_remote integration not ready yet: Couldn't connect to 192.168.0.104:6466; Retrying in background
-2023-05-11 00:43:39.296 ERROR (SyncWorker_0) [homeassistant.components.influxdb] InfluxDB database is not accessible due to '401: {"code":"unauthorized","message":"Unauthorized"}'. Please check that the database, username and password are correct and that the specified user has the correct permissions set. Retrying in 60 seconds.
-2023-05-11 00:44:39.301 ERROR (SyncWorker_2) [homeassistant.components.influxdb] InfluxDB database is not accessible due to '401: {"code":"unauthorized","message":"Unauthorized"}'. Please check that the database, username and password are correct and that the specified user has the correct permissions set. Retrying in 60 seconds.
-2023-05-11 00:45:39.304 ERROR (SyncWorker_5) [homeassistant.components.influxdb] InfluxDB database is not accessible due to '401: {"code":"unauthorized","message":"Unauthorized"}'. Please check that the database, username and password are correct and that the specified user has the correct permissions set. Retrying in 60 seconds.
+2023-05-11 08:01:50.010 ERROR (SyncWorker_8) [homeassistant.components.influxdb] Cannot connect to InfluxDB due to 'HTTPConnectionPool(host='192.168.0.112', port=8086): Max retries exceeded with url: /write?db=home_assistant (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f880ada71c0>: Failed to establish a new connection: [Errno 111] Connection refused'))'. Please check that the provided connection details (host, port, etc.) are correct and that your InfluxDB server is running and accessible. Retrying in 60 seconds.
+2023-05-11 08:01:53.050 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Pendrive Mi TV' for androidtv_remote integration not ready yet: Couldn't connect to 192.168.0.104:6466; Retrying in background
+2023-05-11 08:02:50.046 ERROR (SyncWorker_7) [homeassistant.components.influxdb] InfluxDB database is not accessible due to '401: {"code":"unauthorized","message":"Unauthorized"}'. Please check that the database, username and password are correct and that the specified user has the correct permissions set. Retrying in 60 seconds.
+2023-05-11 08:03:14.462 WARNING (MainThread) [homeassistant.core] Task <Task pending name='call_later 40.427467' coro=<ConfigEntry.async_setup.<locals>.setup_again() running at /usr/src/homeassistant/homeassistant/config_entries.py:457> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(28, handle=<Handle BaseS....104', 6466))>)(), Task.task_wakeup()]> cb=[set.remove()]> was still running after stage 2 shutdown; Integrations should cancel non-critical tasks when receiving the stop event to prevent delaying shutdown
+2023-05-11 08:03:14.557 ERROR (MainThread) [homeassistant.config_entries] Error setting up entry Pendrive Mi TV for androidtv_remote
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/config_entries.py", line 387, in async_setup
+    result = await component.async_setup_entry(hass, self)
+  File "/usr/src/homeassistant/homeassistant/components/androidtv_remote/__init__.py", line 27, in async_setup_entry
+    await api.async_connect()
+  File "/usr/local/lib/python3.10/site-packages/androidtvremote2/androidtv_remote.py", line 158, in async_connect
+    ) = await self._loop.create_connection(
+  File "/usr/local/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/usr/local/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/usr/local/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+asyncio.exceptions.CancelledError
