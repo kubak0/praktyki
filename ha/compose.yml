@@ -21,6 +21,8 @@ services:
     restart: always
     ports:
       - 3000:3000
+    networks:
+      - grafana_network
     volumes:
       - grafana_data:/var/lib/grafana
     depends_on:
@@ -31,7 +33,7 @@ services:
       - traefik.http.routers.grafana.rule=Host(`grafana.localhost`)
       - "traefik.backend=grafana"
       - "traefik.frontend.rule=Path: /grafana/"
-
+  
   influxdb:
     image: influxdb
     container_name: influxdb
@@ -65,11 +67,14 @@ services:
     ports:
       - "80:80"
       - "8080:8080"
+    networks:
+      - grafana_network
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
 
 networks:
   grafana_network:
+      driver: bridge
   network1:
     name: no-internet
     internal: true
