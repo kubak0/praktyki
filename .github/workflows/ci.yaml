@@ -17,6 +17,11 @@ jobs:
       uses: azure/setup-kubectl@v1
       with:
         version: 'v1.24.0'
+        
+    - name: Configure kubeconfig
+      run: |
+        mkdir -p ~/.kube
+        echo "${{ secrets.KUBECONFIG }}" > ~/.kube/config
       
     - name: Install Helm
       run: |
