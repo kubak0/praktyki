@@ -119,6 +119,31 @@ spec:
         image: grafana/grafana:latest
         ports:
         - containerPort: 3000
+        volumeMounts:
+        - name: grafana-config
+          mountPath: /etc/grafana
+          subPath: grafana.ini
+        env:
+        - name: GF_SERVER_ROOT_URL
+          value: "https://9902-2a03-6600-3-7ef9-00-1000.ngrok-free.app"
+        - name: GF_SERVER_ENABLE_CORS
+          value: "true"
+      volumes:
+      - name: grafana-config
+        configMap:
+          name: grafana-config
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-config
+data:
+  grafana.ini: |
+    [server]
+    root_url = https://9902-2a03-6600-3-7ef9-00-1000.ngrok-free.app/
+    serve_from_sub_path = true
+    enable_cors = true
 
 ---
 apiVersion: v1
@@ -174,4 +199,84 @@ spec:
     targetPort: 443
   selector:
     k8s-app: metrics-server
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitea-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gitea
+  template:
+    metadata:
+      labels:
+        app: gitea
+    spec:
+      containers:
+      - name: gitea
+        image: gitea/gitea:latest
+        ports:
+        - containerPort: 3000
+        - containerPort: 22
+        volumeMounts:
+        - name: gitea-data
+          mountPath: /data
+      volumes:
+      - name: gitea-data
+        persistentVolumeClaim:
+          claimName: gitea-pvc
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: gitea-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gitea-service
+spec:
+  selector:
+    app: gitea
+  ports:
+  - name: http
+    protocol: TCP
+    port: 3000
+    targetPort: 3000
+  - name: ssh
+    protocol: TCP
+    port: 22
+    targetPort: 22
+  type: ClusterIP
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: gitea-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: xxxxxx.ngrok.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: gitea-service
+            port:
+              number: 3000
 
