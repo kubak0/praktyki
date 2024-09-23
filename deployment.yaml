@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: whoami-deployment
+  name: whoami
 spec:
   replicas: 5
   selector:
@@ -17,26 +17,28 @@ spec:
         image: containous/whoami
         ports:
         - containerPort: 80
+        env:
+        - name: WHOAMI_ENV
+          value: "Kubernetes"
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: whoami-service
+  name: whoami
 spec:
+  type: LoadBalancer
   selector:
     app: whoami
   ports:
-  - protocol: TCP
-    port: 80
+  - port: 80
     targetPort: 80
-  type: LoadBalancer
 
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: prometheus-deployment
+  name: prometheus
 spec:
   replicas: 1
   selector:
@@ -49,15 +51,16 @@ spec:
     spec:
       containers:
       - name: prometheus
-        image: prom/prometheus:v2.42.0
+        image: prom/prometheus
         ports:
         - containerPort: 9090
         volumeMounts:
-        - name: prometheus-config
-          mountPath: /etc/prometheus
-          readOnly: true
+        - name: config-volume
+          mountPath: /etc/prometheus/
+        args:
+          - --config.file=/etc/prometheus/prometheus.yml
       volumes:
-      - name: prometheus-config
+      - name: config-volume
         configMap:
           name: prometheus-config
 
@@ -71,39 +74,37 @@ data:
     global:
       scrape_interval: 15s
     scrape_configs:
-      - job_name: 'whoami'
-        static_configs:
-          - targets: ['whoami-service:80']
       - job_name: 'kubernetes-nodes'
         kubernetes_sd_configs:
-          - role: node
+        - role: node
       - job_name: 'kubernetes-pods'
         kubernetes_sd_configs:
-          - role: pod
+        - role: pod
         relabel_configs:
-          - source_labels: [__meta_kubernetes_pod_label_app]
-            action: keep
-            regex: .*
+        - source_labels: [__meta_kubernetes_pod_ready]
+          action: keep
+          regex: true
+      - job_name: 'whoami'
+        static_configs:
+          - targets: ['whoami:80']
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: prometheus-service
+  name: prometheus
 spec:
+  ports:
+  - port: 9090
+    targetPort: 9090
   selector:
     app: prometheus
-  ports:
-  - protocol: TCP
-    port: 9090
-    targetPort: 9090
-  type: NodePort
 
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: grafana-deployment
+  name: grafana
 spec:
   replicas: 1
   selector:
@@ -116,95 +117,30 @@ spec:
     spec:
       containers:
       - name: grafana
-        image: grafana/grafana:latest
+        image: grafana/grafana
         ports:
         - containerPort: 3000
-        volumeMounts:
-        - name: grafana-config
-          mountPath: /etc/grafana
-          subPath: grafana.ini
         env:
-        - name: GF_SERVER_ROOT_URL
-          value: "https://9902-2a03-6600-3-7ef9-00-1000.ngrok-free.app"
-        - name: GF_SERVER_ENABLE_CORS
-          value: "true"
-      volumes:
-      - name: grafana-config
-        configMap:
-          name: grafana-config
-
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: grafana-config
-data:
-  grafana.ini: |
-    [server]
-    root_url = https://9902-2a03-6600-3-7ef9-00-1000.ngrok-free.app/
-    serve_from_sub_path = true
-    enable_cors = true
+        - name: GF_SECURITY_ADMIN_PASSWORD
+          value: "admin"
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: grafana-service
+  name: grafana
 spec:
+  ports:
+  - port: 3000
+    targetPort: 3000
   selector:
     app: grafana
-  ports:
-  - protocol: TCP
-    port: 3000
-    targetPort: 3000
-  type: NodePort
 
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: metrics-server-deployment
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      k8s-app: metrics-server
-  template:
-    metadata:
-      labels:
-        k8s-app: metrics-server
-    spec:
-      containers:
-      - name: metrics-server
-        image: k8s.gcr.io/metrics-server/metrics-server:v0.6.2
-        ports:
-        - containerPort: 4443
-        command:
-          - /metrics-server
-          - --kubelet-insecure-tls
-          - --kubelet-preferred-address-types=InternalIP
-          - --cert-dir=/tmp
-          - --secure-port=4443
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: metrics-server
-  labels:
-    k8s-app: metrics-server
-spec:
-  ports:
-  - port: 443
-    targetPort: 443
-  selector:
-    k8s-app: metrics-server
-
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: gitea-deployment
+  name: gitea
 spec:
   replicas: 1
   selector:
@@ -220,7 +156,17 @@ spec:
         image: gitea/gitea:latest
         ports:
         - containerPort: 3000
-        - containerPort: 22
+        env:
+        - name: USER
+          value: "gitea"
+        - name: GITEA__database__DB_TYPE
+          value: "sqlite3"
+        - name: GITEA__database__PATH
+          value: "/data/gitea/gitea.db"
+        - name: GITEA__server__DOMAIN
+          value: "localhost"
+        - name: GITEA__server__ROOT_URL
+          value: "http://localhost:3000"
         volumeMounts:
         - name: gitea-data
           mountPath: /data
@@ -228,6 +174,18 @@ spec:
       - name: gitea-data
         persistentVolumeClaim:
           claimName: gitea-pvc
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gitea
+spec:
+  ports:
+  - port: 3000
+    targetPort: 3000
+  selector:
+    app: gitea
 
 ---
 apiVersion: v1
@@ -239,44 +197,17 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 10Gi
+      storage: 1Gi
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: gitea-service
+  name: metrics-server
 spec:
-  selector:
-    app: gitea
   ports:
-  - name: http
-    protocol: TCP
-    port: 3000
-    targetPort: 3000
-  - name: ssh
-    protocol: TCP
-    port: 22
-    targetPort: 22
-  type: ClusterIP
-
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: gitea-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
-spec:
-  rules:
-  - host: xxxxxx.ngrok.io
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: gitea-service
-            port:
-              number: 3000
+  - port: 443
+    targetPort: 443
+  selector:
+    k8s-app: metrics-server
 
