@@ -25,29 +25,6 @@ jobs:
       - name: Instalacja Helm
         run: |
           curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
-          
-      - name: Instalacja Gitea
-        run: |
-          sudo microk8s helm repo add gitea https://dl.gitea.io/charts
-          sudo microk8s helm repo update
-          sudo microk8s helm install gitea gitea/gitea --namespace gitea --create-namespace
-
-      - name: Tworzenie namespace nginx
-        run: |
-          sudo microk8s kubectl create namespace nginx || true
-
-      - name: Tworzenie konta usługi
-        run: |
-          echo "apiVersion: v1
-          kind: ServiceAccount
-          metadata:
-            name: default
-            namespace: nginx" | sudo microk8s kubectl apply -f -
-
-      - name: Instalacja Nginx
-        run: |
-          sudo microk8s kubectl run nginx --image=nginx --port=80 --namespace=nginx
-          sudo microk8s kubectl expose pod nginx --type=NodePort --name=nginx-service --port=80 --target-port=80 --namespace=nginx
 
       - name: Kubernetes Cluster
         run: |
@@ -63,27 +40,59 @@ jobs:
         run: |
           echo "Sprawdzam dostępne pody..."
           sudo microk8s kubectl get pods --show-labels
-
-      - name: Usuwanie poda nginx
+          
+      - name: Tworzenie podów z deployment.yaml
         run: |
-          echo "Usuwam pod nginx..."
-          if sudo microk8s kubectl get pods | grep nginx; then
-              sudo microk8s kubectl delete pod -l app=nginx
-              echo "Pod nginx został usunięty."
+          if [ -f deployment.yaml ]; then
+              sudo microk8s kubectl apply -f deployment.yaml
+              echo "Pody zostały utworzone na podstawie deployment.yaml."
           else
-              echo "Nie znaleziono podów nginx do usunięcia."
+              echo "Nie znaleziono pliku deployment.yaml."
           fi
 
-      - name: Sprawdzenie stanu zdrowia podów
+      - name: Uruchamianie testów
         run: |
-          set -e
-          echo "Sprawdzanie zdrowia podów..."
-          for pod in whoami grafana gitea prometheus; do
-            echo "Sprawdzam pod: $pod"
-            status=$(sudo microk8s kubectl get pod -l app=$pod -o jsonpath='{.items[0].status.containerStatuses[0].ready}')
-            if [ "$status" != "true" ]; then
-              echo "Pod $pod nie jest gotowy!"
+          echo "Uruchamianie testów..."
+          if sudo microk8s kubectl get pods | grep gitea; then
+              echo "Pod gitea został znaleziony."
+          else
+              echo "Pod gitea nie został znaleziony!"
               exit 1
-            fi
-          done
-          echo "Wszystkie pody są zdrowe!"
+          fi
+
+          if sudo microk8s kubectl get pods | grep whoami; then
+              WHOAMI_POD=$(sudo microk8s kubectl get pods | grep whoami | awk '{print $1}')
+              echo "Testuję endpoint whoami..."
+              RESPONSE=$(sudo microk8s kubectl exec $WHOAMI_POD -- curl -s http://localhost)
+              if [[ "$RESPONSE" == *"whoami"* ]]; then
+                  echo "Test endpointu whoami zakończony sukcesem."
+              else
+                  echo "Test endpointu whoami nie powiódł się."
+                  exit 1
+              fi
+          else
+              echo "Pod whoami nie został znaleziony!"
+              exit 1
+          fi
+
+      - name: Zatrzymanie podu whoami
+        run: |
+          echo "Zatrzymuję pod whoami..."
+          if sudo microk8s kubectl scale deployment whoami --replicas=0; then
+              echo "Pod whoami został zatrzymany."
+          else
+              echo "Nie udało się zatrzymać poda whoami."
+          fi
+
+      - name: Sprawdzanie stanu zdrowia podów
+        run: |
+          echo "Sprawdzanie stanu zdrowia podów..."
+          if sudo microk8s kubectl get pods | grep -v Running; then
+              echo "Następujące pody nie są w stanie Running:"
+              sudo microk8s kubectl get pods | grep -v Running
+              exit 1
+          else
+              echo "Wszystkie pody są w stanie Running."
+          fi
+
+
