@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -198,16 +199,20 @@ spec:
   resources:
     requests:
       storage: 1Gi
+  storageClassName: standard
 
 ---
 apiVersion: v1
-kind: Service
+kind: PersistentVolume
 metadata:
-  name: metrics-server
+  name: gitea-pv
 spec:
-  ports:
-  - port: 443
-    targetPort: 443
-  selector:
-    k8s-app: metrics-server
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: standard
+  hostPath:
+    path: "/mnt/data/gitea"
 

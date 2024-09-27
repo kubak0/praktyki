@@ -1,0 +1,17 @@
+kind: pipeline
+type: kubernetes
+name: default
+
+steps:
+- name: deploy
+  image: alpine/k8s
+  environment:
+    KUBECONFIG: /root/.kube/config
+  commands:
+  - helm upgrade --install gitea-environment ./gitea-environment
+
+trigger:
+  event:
+    - pull_request
+    - push
+    - tag
