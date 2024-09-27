@@ -64,26 +64,15 @@ jobs:
           echo "Sprawdzam dostępne pody..."
           sudo microk8s kubectl get pods --show-labels
 
-     - name: Running pod delete chaos experiment
-      uses: litmuschaos/github-chaos-actions@v0.4.0
-      env:
-        KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
-        ##If litmus is not installed
-        INSTALL_LITMUS: true
-        ##Give application info under chaos
-        APP_NS: default
-        APP_LABEL: run=nginx
-        APP_KIND: deployment
-        EXPERIMENT_NAME: pod-delete
-        ##Custom images can also be used
-        EXPERIMENT_IMAGE: litmuschaos/go-runner
-        EXPERIMENT_IMAGE_TAG: latest
-        IMAGE_PULL_POLICY: Always
-        TOTAL_CHAOS_DURATION: 30
-        CHAOS_INTERVAL: 10
-        FORCE: false
-        ##Select true if you want to uninstall litmus after chaos
-        LITMUS_CLEANUP: true
+      - name: Usuwanie poda nginx
+        run: |
+          echo "Usuwam pod nginx..."
+          if sudo microk8s kubectl get pods | grep nginx; then
+              sudo microk8s kubectl delete pod -l app=nginx
+              echo "Pod nginx został usunięty."
+          else
+              echo "Nie znaleziono podów nginx do usunięcia."
+          fi
 
       - name: Sprawdzenie stanu zdrowia podów
         run: |
