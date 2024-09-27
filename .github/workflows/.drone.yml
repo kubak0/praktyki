@@ -30,7 +30,7 @@ jobs:
 
       - name: Konfiguracja kubeconfig
         run: |
-          microk8s kubectl config view --raw > $HOME/.kube/config
+          sudo microk8s kubectl config view --raw > $HOME/.kube/config
           chmod 777 $HOME/.kube/config
 
       - name: Instalacja Helm
@@ -40,7 +40,7 @@ jobs:
       - name: Kubernetes Cluster
         run: |
           sudo newgrp microk8s || true
-          microk8s kubectl cluster-info
+          sudo microk8s kubectl cluster-info
 
       - name: Helm
         run: |
