@@ -13,32 +13,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Sprawdzanie kodu
         uses: actions/checkout@v2
 
-      - name: Install MicroK8s
+      - name: Instalacja MicroK8s
         run: |
           sudo snap install microk8s --classic
           sudo microk8s start
           sudo microk8s status --wait-ready
+          sudo usermod -a -G microk8s runner
+          sudo chown -R runner ~/.kube
+          newgrp microk8s || true # aktualizacja grupy
 
-      - name: Create .kube directory
+      - name: Utworzenie .kube
         run: mkdir -p $HOME/.kube
 
-      - name: Configure kubeconfig
+      - name: Konfiguracja kubeconfig
         run: |
           sudo microk8s kubectl config view --raw > $HOME/.kube/config
           chmod 600 $HOME/.kube/config
 
-      - name: Install Helm
+      - name: Instalacja Helm
         run: |
           curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 
-      - name: Check Kubernetes Cluster
+      - name: Kubernetes Cluster
         run: |
           microk8s kubectl cluster-info
 
-      - name: Deploy with Helm
+      - name: Helm
         run: |
           helm upgrade --install gitea-environment ./gitea-environment
 
