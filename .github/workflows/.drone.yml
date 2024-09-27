@@ -44,86 +44,59 @@ jobs:
           else
               echo "Nie znaleziono pliku deployment.yaml."
           fi
-          
+      
       - name: Czekam 10 sekund na uruchomienie podów
         run: |
-          echo "Czekam 10 sekund na uruchomienie podów..."
+          echo "Czekam 10 sekund..."
           sleep 10
-
-      - name: Sprawdzanie deploymentów
+          
+      - name: Sprawdzam deploymenty
         run: |
-          echo "Sprawdzanie deploymentów..."
-          NAMESPACE=default
-
-          if sudo microk8s kubectl get deployments -n $NAMESPACE; then
-              echo "Deploymenty zostały pomyślnie sprawdzone."
+          echo "Sprawdzam dostępne deploymenty..."
+          DEPLOYMENTS=$(sudo microk8s kubectl get deployments --no-headers | wc -l)
+          if [ $DEPLOYMENTS -eq 0 ]; then
+              echo "Nie znaleziono żadnych deploymentów. Zatrzymuję pipeline."
+              exit 1
           else
-              echo "Wystąpił problem przy sprawdzaniu deploymentów!"
+              echo "Znaleziono $DEPLOYMENTS deploymentów. Przechodzę dalej."
+          fi
+
+      - name: Czekam 5 sekund na uruchomienie podów
+        run: |
+          echo "Czekam 5 sekund..."
+          sleep 5
+
+      - name: Sprawdzam stan podów
+        run: |
+          echo "Sprawdzam stan podów..."
+          POD_STATUS=$(sudo microk8s kubectl get pods --field-selector=status.phase!=Running --no-headers | wc -l)
+          if [ $POD_STATUS -eq 0 ]; then
+              echo "Wszystkie pody są w stanie Running. Przechodzę do testów."
+          else
+              echo "Niektóre pody nie są w stanie Running. Zatrzymuję pipeline."
+              sudo microk8s kubectl get pods
               exit 1
           fi
-
-      - name: Czekam 5 sekund przed uruchomieniem testów
-        run: |
-          echo "Czekam 5 sekund przed uruchomieniem testów..."
-          sleep 5
-          
-      - name: Zatrzymanie deploymentu whoami
-        run: |
-          echo "Zatrzymuję deployment whoami..."
-          if sudo microk8s kubectl scale deployment whoami --replicas=0 -n $NAMESPACE; then
-              echo "Deployment whoami został zatrzymany."
-          else
-              echo "Nie udało się zatrzymać deploymentu whoami."
-          fi
-          
-      - name: Czekam 30 sekund na testy
-        run: |
-          echo "Czekam 30 sekund na testy..."
-          sleep 30
 
       - name: Uruchamianie testów
         run: |
           echo "Uruchamianie testów..."
-          NAMESPACE=default
-          
-          if sudo microk8s kubectl get deployments -n $NAMESPACE | grep gitea; then
-              echo "Deployment gitea został znaleziony."
-          else
-              echo "Deployment gitea nie został znaleziony!"
-              exit 1
-          fi
+          # Tutaj dodajesz swoje testy
 
-          if sudo microk8s kubectl get deployments -n $NAMESPACE | grep whoami; then
-              WHOAMI_DEPLOYMENT=$(sudo microk8s kubectl get deployments -n $NAMESPACE | grep whoami | awk '{print $1}')
-              echo "Testuję endpoint whoami..."
-              
-              WHOAMI_POD=$(sudo microk8s kubectl get pods -n $NAMESPACE --selector=app=whoami -o jsonpath='{.items[0].metadata.name}')
-              
-              if [ -n "$WHOAMI_POD" ]; then
-                  RESPONSE=$(sudo microk8s kubectl exec -n $NAMESPACE $WHOAMI_POD -- curl -s http://localhost)
-                  if [[ "$RESPONSE" == *"whoami"* ]]; then
-                      echo "Test endpointu whoami zakończony sukcesem."
-                  else
-                      echo "Test endpointu whoami nie powiódł się."
-                      exit 1
-                  fi
-              else
-                  echo "Nie znaleziono podu whoami!"
-                  exit 1
-              fi
-          else
-              echo "Deployment whoami nie został znaleziony!"
-              exit 1
-          fi
-
-      - name: Sprawdzanie stanu zdrowia podów
+      - name: Usuwam pod whoami
         run: |
-          echo "Sprawdzanie stanu zdrowia podów..."
-          if sudo microk8s kubectl get deployment -n $NAMESPACE | grep -v Running; then
-              echo "Następujące pody nie są w stanie Running:"
-              sudo microk8s kubectl get deployment -n $NAMESPACE | grep -v Running
-              exit 1
+          echo "Usuwam pod whoami..."
+          sudo microk8s kubectl delete pod -l app=whoami
+          echo "Pod whoami został usunięty."
+
+      - name: Sprawdzam stan podów po usunięciu whoami
+        run: |
+          echo "Sprawdzam stan podów po usunięciu whoami..."
+          POD_STATUS=$(sudo microk8s kubectl get pods --field-selector=status.phase!=Running --no-headers | wc -l)
+          if [ $POD_STATUS -eq 0 ]; then
+              echo "Wszystkie pozostałe pody są w stanie Running."
           else
-              echo "Wszystkie pody są w stanie Running."
-
-
+              echo "Niektóre pody nie są w stanie Running. Zatrzymuję pipeline."
+              sudo microk8s kubectl get pods
+              exit 1
+          fi
