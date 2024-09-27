@@ -31,7 +31,7 @@ jobs:
       - name: Konfiguracja kubeconfig
         run: |
           microk8s kubectl config view --raw > $HOME/.kube/config
-          chmod 600 $HOME/.kube/config
+          chmod 777 $HOME/.kube/config
 
       - name: Instalacja Helm
         run: |
