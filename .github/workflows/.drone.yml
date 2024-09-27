@@ -45,5 +45,27 @@ jobs:
       - name: Helm
         run: |
           newgrp microk8s || true
-          helm upgrade --install gitea-environment ./gitea-environment
+          sudo helm upgrade --install gitea-environment ./gitea-environment
+
+      - name: Usunięcie losowego poda
+        run: |
+          echo "Usuwanie losowego poda..."
+          pod_name=$(sudo microk8s kubectl get pods -l app=gitea -o jsonpath='{.items[0].metadata.name}')
+          echo "Usuwam pod: $pod_name"
+          sudo microk8s kubectl delete pod $pod_name
+          echo "Usunięty pod: $pod_name"
+
+      - name: Sprawdzenie stanu zdrowia podów
+        run: |
+          set -e
+          echo "Sprawdzanie podów..."
+          for pod in whoami grafana gitea prometheus; do
+            echo "Sprawdzam pod: $pod"
+            status=$(sudo microk8s kubectl get pod -l app=$pod -o jsonpath='{.items[0].status.containerStatuses[0].ready}')
+            if [ "$status" != "true" ]; then
+              echo "Pod $pod nie jest gotowy!"
+              exit 1
+            fi
+          done
+          echo "Wszystkie pody dzialaja"
 

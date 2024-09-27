@@ -1,0 +1,28 @@
+name: Test Microk8s
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: A job to install MicroK8s
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install MicroK8s
+        uses: balchua/microk8s-actions@v0.4.0
+        with:
+          channel: '1.30/classic'
+          addons: '["dns", "rbac", "hostpath-storage", "registry", "metrics-server", "ingress", "storage", "dashboard", "prometheus"]'
+
+      - name: Test MicroK8s
+        run: |
+          microk8s kubectl get nodes
+          microk8s kubectl get pods -A -o wide
+
+      - name: Test MicroK8s commands
+        run: |
+          set -ex
+          sg microk8s -c 'microk8s status'
+          sudo microk8s status
