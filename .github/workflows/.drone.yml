@@ -36,11 +36,6 @@ jobs:
           newgrp microk8s || true
           helm upgrade --install gitea-environment ./gitea-environment
           
-      - name: Sprawdzenie dostępnych podów
-        run: |
-          echo "Sprawdzam dostępne pody..."
-          sudo microk8s kubectl get pods --show-labels
-          
       - name: Tworzenie podów z deployment.yaml
         run: |
           if [ -f deployment.yaml ]; then
@@ -49,6 +44,16 @@ jobs:
           else
               echo "Nie znaleziono pliku deployment.yaml."
           fi
+     
+      - name: Sprawdzenie dostępnych podów
+        run: |
+          echo "Sprawdzam dostępne pody..."
+          sudo microk8s kubectl get pods --show-labels
+          
+      - name: 5 sekundowa przerwa
+        run: |
+          echo "Czekam 5 sekund na uruchomienie podów..."
+          sleep 5
 
       - name: Uruchamianie testów
         run: |
