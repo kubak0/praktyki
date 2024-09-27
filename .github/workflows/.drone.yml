@@ -33,6 +33,10 @@ jobs:
           echo "${{ secrets.KUBE_CONFIG }}" > $HOME/.kube/config
           chmod 600 $HOME/.kube/config
 
+      - name: Print Kubeconfig
+        run: |
+          cat $HOME/.kube/config  # Wyświetla zawartość pliku Kubeconfig
+
       - name: Deploy with Helm
         run: |
           helm upgrade --install gitea-environment ./gitea-environment
