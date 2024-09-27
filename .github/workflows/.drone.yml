@@ -34,7 +34,7 @@ jobs:
 
       - name: Instalacja Whoami
         run: |
-          sudo microk8s helm repo add weaveworks https://weaveworks.github.io/flux2
+          sudo microk8s helm repo add cowboysysop https://cowboysysop.github.io/charts/
           sudo microk8s helm repo update
           sudo microk8s helm install whoami weaveworks/whoami
 
