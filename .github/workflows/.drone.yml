@@ -83,11 +83,11 @@ jobs:
           echo "Uruchamianie testów..."
           # Tutaj dodajesz swoje testy
 
-      - name: Usuwam pod whoami
+      - name: Zatrzymuję deployment gitea
         run: |
-          echo "Usuwam pod whoami..."
-          sudo microk8s kubectl delete pod -l app=whoami
-          echo "Pod whoami został usunięty."
+          echo "Zatrzymuję deployment gitea..."
+          sudo microk8s kubectl scale deployment gitea --replicas=0
+          echo "Deployment gitea został zatrzymany (replicas=0)."
 
       - name: Sprawdzam stan podów po usunięciu whoami
         run: |
