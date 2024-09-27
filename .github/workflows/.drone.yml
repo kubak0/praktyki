@@ -34,9 +34,9 @@ jobs:
 
       - name: Instalacja Whoami
         run: |
-          sudo microk8s helm repo add whoami https://humorless-rosalind-98fef2.netlify.app
+          sudo microk8s helm repo add containous https://charts.containo.us
           sudo microk8s helm repo update
-          sudo microk8s helm install whoami whoami/whoami --namespace whoami --create-namespace
+          sudo microk8s helm install whoami containous/whoami --namespace whoami --create-namespace
 
       - name: Kubernetes Cluster
         run: |
