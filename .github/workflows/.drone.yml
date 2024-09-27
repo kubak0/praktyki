@@ -1,9 +1,6 @@
 name: CI/CD Pipeline
 
 on:
-  pull_request:
-    branches:
-      - main
   push:
     branches:
       - main
@@ -31,10 +28,9 @@ jobs:
           echo "${{ secrets.KUBE_CONFIG }}" > $HOME/.kube/config
           chmod 600 $HOME/.kube/config
 
-      - name: Port Forwarding
+      - name: Check Kubernetes Cluster
         run: |
-          nohup kubectl port-forward service/whoami 8080:80 &
-          sleep 5  # Daj czas na uruchomienie port forward
+          kubectl cluster-info
 
       - name: Deploy with Helm
         run: |
