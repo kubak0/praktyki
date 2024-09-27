@@ -13,24 +13,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Kubernetes
-        uses: azure/setup-kubectl@v1
-        with:
-          version: 'latest'
+      - name: Set up MicroK8s
+        run: |
+          sudo snap install microk8s --classic
+          sudo microk8s start
+          sudo microk8s kubectl config view --raw > $HOME/.kube/config
 
       - name: Install Helm
         run: |
           curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 
-      - name: Configure Kubeconfig
-        run: |
-          mkdir -p $HOME/.kube  # Utwórz katalog, jeśli nie istnieje
-          echo "${{ secrets.KUBE_CONFIG }}" > $HOME/.kube/config
-          chmod 600 $HOME/.kube/config
-
       - name: Check Kubernetes Cluster
         run: |
-          kubectl cluster-info
+          microk8s kubectl cluster-info
 
       - name: Deploy with Helm
         run: |
