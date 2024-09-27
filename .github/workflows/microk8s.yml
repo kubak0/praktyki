@@ -13,7 +13,7 @@ jobs:
       - name: Install MicroK8s
         uses: balchua/microk8s-actions@v0.4.0
         with:
-          channel: '1.30/classic'
+          channel: '1.30/stable'
           addons: '["dns", "rbac", "hostpath-storage", "registry", "metrics-server", "ingress", "storage", "dashboard", "prometheus"]'
 
       - name: Test MicroK8s
