@@ -18,8 +18,8 @@ jobs:
 
       - name: Test MicroK8s
         run: |
-          microk8s kubectl get nodes
-          microk8s kubectl get pods -A -o wide
+          sudo microk8s kubectl get nodes
+          sudo microk8s kubectl get pods -A -o wide
 
       - name: Test MicroK8s commands
         run: |
