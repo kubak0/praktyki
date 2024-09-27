@@ -66,6 +66,20 @@ jobs:
         run: |
           echo "Czekam 5 sekund przed uruchomieniem testów..."
           sleep 5
+          
+      - name: Zatrzymanie deploymentu whoami
+        run: |
+          echo "Zatrzymuję deployment whoami..."
+          if sudo microk8s kubectl scale deployment whoami --replicas=0 -n $NAMESPACE; then
+              echo "Deployment whoami został zatrzymany."
+          else
+              echo "Nie udało się zatrzymać deploymentu whoami."
+          fi
+          
+      - name: Czekam 30 sekund na testy
+        run: |
+          echo "Czekam 30 sekund na testy..."
+          sleep 30
 
       - name: Uruchamianie testów
         run: |
@@ -100,15 +114,6 @@ jobs:
           else
               echo "Deployment whoami nie został znaleziony!"
               exit 1
-          fi
-
-      - name: Zatrzymanie deploymentu whoami
-        run: |
-          echo "Zatrzymuję deployment whoami..."
-          if sudo microk8s kubectl scale deployment whoami --replicas=0 -n $NAMESPACE; then
-              echo "Deployment whoami został zatrzymany."
-          else
-              echo "Nie udało się zatrzymać deploymentu whoami."
           fi
 
       - name: Sprawdzanie stanu zdrowia podów
