@@ -32,11 +32,11 @@ jobs:
           sudo microk8s helm repo update
           sudo microk8s helm install gitea gitea/gitea --namespace gitea --create-namespace
 
-      - name: Instalacja httpbin
+      - name: Instalacja Nginx
         run: |
-          sudo microk8s helm repo add bitnami https://charts.bitnami.com/bitnami
-          sudo microk8s helm repo update
-          sudo microk8s helm install httpbin bitnami/httpbin
+          sudo microk8s kubectl create namespace nginx
+          sudo microk8s kubectl run nginx --image=nginx --port=80 --namespace=nginx
+          sudo microk8s kubectl expose pod nginx --type=NodePort --name=nginx-service --port=80 --target-port=80 --namespace=nginx
 
       - name: Kubernetes Cluster
         run: |
