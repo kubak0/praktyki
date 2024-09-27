@@ -61,7 +61,7 @@ jobs:
               echo "Znaleziono $DEPLOYMENTS deploymentów. Przechodzę dalej."
           fi
 
-      - name: Czekam 5 sekund na uruchomienie deploymentów
+      - name: Czekam 5 sekund na sprawdzenie stanu
         run: |
           echo "Czekam 5 sekund..."
           sleep 5
@@ -97,11 +97,18 @@ jobs:
       - name: Sprawdzam stan deploymentów po zatrzymaniu deploymentu gitea
         run: |
           echo "Sprawdzam stan deploymentów po zatrzymaniu deploymentu gitea..."
-          DEPLOY_STATUS=$(sudo microk8s kubectl get deployments --field-selector=status.availableReplicas!=1 --no-headers | wc -l)
-          if [ $DEPLOY_STATUS -eq 0 ]; then
-              echo "Wszystkie pozostałe deploymenty mają dostępne repliki."
-          else
-              echo "Niektóre deploymenty nie mają dostępnych replik. Zatrzymuję pipeline."
-              sudo microk8s kubectl get deployments
+          DEPLOYMENTS=$(sudo microk8s kubectl get deployments -o jsonpath='{.items[*].metadata.name}')
+          
+          for DEPLOY in $DEPLOYMENTS; do
+            REPLICAS=$(sudo microk8s kubectl get deployment $DEPLOY -o jsonpath='{.status.availableReplicas}')
+            
+            if [ "$REPLICAS" == "0" ] || [ -z "$REPLICAS" ]; then
+              echo "Deployment $DEPLOY nie ma dostępnych replik. Zatrzymuję pipeline."
               exit 1
-          fi
+            else
+              echo "Deployment $DEPLOY ma dostępne repliki."
+            fi
+          done
+          
+          echo "Wszystkie pozostałe deploymenty mają dostępne repliki."
+
