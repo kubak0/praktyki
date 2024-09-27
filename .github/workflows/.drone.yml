@@ -16,14 +16,11 @@ jobs:
       - name: Sprawdzanie kodu
         uses: actions/checkout@v2
 
-      - name: Instalacja MicroK8s
-        run: |
-          sudo snap install microk8s --classic
-          sudo microk8s start
-          sudo microk8s status --wait-ready
-          sudo usermod -aG microk8s runner
-          mkdir -p $HOME/.kube
-          sudo chown -R runner $HOME/.kube
+      - name: Install MicroK8s
+        uses: balchua/microk8s-actions@v0.4.0
+        with:
+          channel: '1.30/stable'
+          addons: '["dns", "rbac", "hostpath-storage", "registry", "metrics-server", "ingress", "storage", "dashboard", "prometheus"]'
 
       - name: Grupy użytkowników
         run: sudo newgrp microk8s || true
@@ -46,3 +43,25 @@ jobs:
         run: |
           newgrp microk8s || true
           helm upgrade --install gitea-environment ./gitea-environment
+
+      - name: Usunięcie losowego poda
+        run: |
+          echo "Usuwam losowy pod z Helm chartów..."
+          pod_name=$(sudo microk8s kubectl get pods -l app=gitea -o jsonpath='{.items[0].metadata.name}')
+          echo "Usuwam pod: $pod_name"
+          sudo microk8s kubectl delete pod $pod_name
+          echo "Usunięto pod: $pod_name"
+
+      - name: Sprawdzenie stanu zdrowia podów
+        run: |
+          set -e
+          echo "Sprawdzanie zdrowia podów..."
+          for pod in whoami grafana gitea prometheus; do
+            echo "Sprawdzam pod: $pod"
+            status=$(sudo microk8s kubectl get pod -l app=$pod -o jsonpath='{.items[0].status.containerStatuses[0].ready}')
+            if [ "$status" != "true" ]; then
+              echo "Pod $pod nie jest gotowy!"
+              exit 1
+            fi
+          done
+          echo "Wszystkie pody są zdrowe!"
