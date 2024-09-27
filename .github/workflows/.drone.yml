@@ -26,7 +26,7 @@ jobs:
           sudo chown -R runner $HOME/.kube
 
       - name: Grupy użytkowników
-        run: newgrp microk8s || true
+        run: sudo newgrp microk8s || true
 
       - name: Konfiguracja kubeconfig
         run: |
@@ -39,7 +39,7 @@ jobs:
 
       - name: Kubernetes Cluster
         run: |
-          newgrp microk8s || true
+          sudo newgrp microk8s || true
           microk8s kubectl cluster-info
 
       - name: Helm
