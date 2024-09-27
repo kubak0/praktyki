@@ -27,6 +27,7 @@ jobs:
           sudo microk8s kubectl config view --raw > $HOME/.kube/config
           sudo chown runner $HOME/.kube/config
           chmod 600 $HOME/.kube/config
+          newgrp microk8s || true  # Użycie newgrp, aby zaktualizować grupy
 
       - name: Instalacja Helm
         run: |
@@ -34,6 +35,7 @@ jobs:
 
       - name: Kubernetes Cluster
         run: |
+          newgrp microk8s || true
           microk8s kubectl cluster-info
 
       - name: Helm
