@@ -1,17 +1,39 @@
-kind: pipeline
-type: kubernetes
-name: default
+name: CI/CD Pipeline
 
-steps:
-- name: deploy
-  image: alpine/k8s
-  environment:
-    KUBECONFIG: /root/.kube/config
-  commands:
-  - helm upgrade --install gitea-environment ./gitea-environment
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  tag:
+    tags:
+      - '*'
 
-trigger:
-  event:
-    - pull_request
-    - push
-    - tag
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Kubernetes
+        uses: azure/setup-kubectl@v1
+        with:
+          version: 'latest'
+
+      - name: Install Helm
+        run: |
+          curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+
+      - name: Configure Kubeconfig
+        run: |
+          echo "${{ secrets.KUBE_CONFIG }}" > $HOME/.kube/config
+          chmod 600 $HOME/.kube/config
+
+      - name: Deploy with Helm
+        run: |
+          helm upgrade --install gitea-environment ./gitea-environment
+
