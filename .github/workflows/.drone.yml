@@ -27,6 +27,7 @@ jobs:
 
       - name: Configure Kubeconfig
         run: |
+          mkdir -p $HOME/.kube  # Utwórz katalog, jeśli nie istnieje
           echo "${{ secrets.KUBE_CONFIG }}" > $HOME/.kube/config
           chmod 600 $HOME/.kube/config
 
