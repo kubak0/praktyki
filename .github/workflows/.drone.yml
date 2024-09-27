@@ -22,14 +22,6 @@ jobs:
           channel: '1.30/stable'
           addons: '["dns", "rbac", "hostpath-storage", "registry", "metrics-server", "ingress", "storage", "dashboard", "prometheus"]'
 
-      - name: Grupy użytkowników
-        run: sudo newgrp microk8s || true
-
-      - name: Konfiguracja kubeconfig
-        run: |
-          sudo microk8s kubectl config view --raw > $HOME/.kube/config
-          chmod 777 $HOME/.kube/config
-
       - name: Instalacja Helm
         run: |
           curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
@@ -47,10 +39,15 @@ jobs:
       - name: Usunięcie losowego poda
         run: |
           echo "Usuwam losowy pod z Helm chartów..."
-          pod_name=$(sudo microk8s kubectl get pods -l app=gitea -o jsonpath='{.items[0].metadata.name}')
+          pod_name=$(sudo microk8s kubectl get pods -l app=gitea -o jsonpath='{.items[0].metadata.name}' || echo "")
+          if [ -z "$pod_name" ]; then
+            echo "Nie znaleziono żadnych podów do usunięcia!"
+            exit 1
+          fi
           echo "Usuwam pod: $pod_name"
           sudo microk8s kubectl delete pod $pod_name
           echo "Usunięto pod: $pod_name"
+
 
       - name: Sprawdzenie stanu zdrowia podów
         run: |
