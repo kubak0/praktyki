@@ -18,7 +18,7 @@ jobs:
 
       - name: Instalacja MicroK8s
         run: |
-          sudo snap install microk8s --classic
+          sudo snap install microk8s --channel=1.30/stable --classic
           sudo microk8s start
           sudo microk8s status --wait-ready
           sudo usermod -aG microk8s runner
@@ -31,7 +31,7 @@ jobs:
       - name: Konfiguracja kubeconfig
         run: |
           sudo microk8s kubectl config view --raw > $HOME/.kube/config
-          chmod 777 $HOME/.kube/config
+          sudo chmod 777 $HOME/.kube/config
 
       - name: Instalacja Helm
         run: |
@@ -44,21 +44,21 @@ jobs:
 
       - name: Helm
         run: |
-          newgrp microk8s || true
+          sudo newgrp microk8s || true
           sudo helm upgrade --install gitea-environment ./gitea-environment
 
       - name: Usunięcie losowego poda
         run: |
-          echo "Usuwanie losowego poda..."
+          echo "Usuwam losowy pod z Helm chartów..."
           pod_name=$(sudo microk8s kubectl get pods -l app=gitea -o jsonpath='{.items[0].metadata.name}')
           echo "Usuwam pod: $pod_name"
           sudo microk8s kubectl delete pod $pod_name
-          echo "Usunięty pod: $pod_name"
+          echo "Usunięto pod: $pod_name"
 
       - name: Sprawdzenie stanu zdrowia podów
         run: |
           set -e
-          echo "Sprawdzanie podów..."
+          echo "Sprawdzanie zdrowia podów..."
           for pod in whoami grafana gitea prometheus; do
             echo "Sprawdzam pod: $pod"
             status=$(sudo microk8s kubectl get pod -l app=$pod -o jsonpath='{.items[0].status.containerStatuses[0].ready}')
@@ -67,5 +67,5 @@ jobs:
               exit 1
             fi
           done
-          echo "Wszystkie pody dzialaja"
+          echo "Wszystkie pody są zdrowe!"
 
