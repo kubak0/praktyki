@@ -44,16 +44,21 @@ jobs:
           else
               echo "Nie znaleziono pliku deployment.yaml."
           fi
+          
+      - name: 25 sekundowa przerwa
+        run: |
+          echo "Czekam 25 sekund na uruchomienie podów..."
+          sleep 25
      
       - name: Sprawdzenie dostępnych podów
         run: |
           echo "Sprawdzam dostępne pody..."
           sudo microk8s kubectl get pods --show-labels
           
-      - name: 5 sekundowa przerwa
+      - name: 10 sekundowa przerwa
         run: |
-          echo "Czekam 5 sekund na uruchomienie podów..."
-          sleep 5
+          echo "Czekam 10 sekund na uruchomienie podów..."
+          sleep 10
 
       - name: Uruchamianie testów
         run: |
