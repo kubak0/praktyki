@@ -32,11 +32,11 @@ jobs:
           sudo microk8s helm repo update
           sudo microk8s helm install gitea gitea/gitea --namespace gitea --create-namespace
 
-      - name: Instalacja Whoami
+      - name: Instalacja httpbin
         run: |
-          sudo microk8s helm repo add cowboysysop https://cowboysysop.github.io/charts/
+          sudo microk8s helm repo add bitnami https://charts.bitnami.com/bitnami
           sudo microk8s helm repo update
-          sudo microk8s helm install whoami weaveworks/whoami
+          sudo microk8s helm install httpbin bitnami/httpbin
 
       - name: Kubernetes Cluster
         run: |
