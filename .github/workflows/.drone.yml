@@ -24,6 +24,7 @@ jobs:
           sudo usermod -aG microk8s runner
           mkdir -p $HOME/.kube
           sudo chown -R runner $HOME/.kube
+          newgrp microk8s || true
 
       - name: Grupy użytkowników
         run: sudo newgrp microk8s || true
