@@ -32,9 +32,20 @@ jobs:
           sudo microk8s helm repo update
           sudo microk8s helm install gitea gitea/gitea --namespace gitea --create-namespace
 
+      - name: Tworzenie namespace nginx
+        run: |
+          sudo microk8s kubectl create namespace nginx || true
+
+      - name: Tworzenie konta usługi
+        run: |
+          echo "apiVersion: v1
+          kind: ServiceAccount
+          metadata:
+            name: default
+            namespace: nginx" | sudo microk8s kubectl apply -f -
+
       - name: Instalacja Nginx
         run: |
-          sudo microk8s kubectl create namespace nginx
           sudo microk8s kubectl run nginx --image=nginx --port=80 --namespace=nginx
           sudo microk8s kubectl expose pod nginx --type=NodePort --name=nginx-service --port=80 --target-port=80 --namespace=nginx
 
