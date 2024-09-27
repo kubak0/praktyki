@@ -59,17 +59,16 @@ jobs:
           newgrp microk8s || true
           helm upgrade --install gitea-environment ./gitea-environment
 
-      - name: Usunięcie losowego poda
+      - name: Usuwanie poda Gitea
         run: |
-          echo "Usuwam losowy pod z Helm chartów..."
-          pod_name=$(sudo microk8s kubectl get pods -l app=gitea -o jsonpath='{.items[0].metadata.name}' || echo "")
-          if [ -z "$pod_name" ]; then
-            echo "Nie znaleziono żadnych podów do usunięcia!"
-            exit 1
+          echo "Usuwam pod Gitea..."
+          GITEA_POD=$(sudo microk8s kubectl get pods -l app=gitea -o jsonpath='{.items[0].metadata.name}')
+          if [ -n "$GITEA_POD" ]; then
+            echo "Usuwam pod: $GITEA_POD..."
+            sudo microk8s kubectl delete pod $GITEA_POD
+          else
+            echo "Nie znaleziono poda Gitea do usunięcia!"
           fi
-          echo "Usuwam pod: $pod_name"
-          sudo microk8s kubectl delete pod $pod_name
-          echo "Usunięto pod: $pod_name"
 
 
       - name: Sprawdzenie stanu zdrowia podów
