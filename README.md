@@ -1,26 +1,11 @@
-# Praktyki z Kubernetes
+# Praktyki
 
----
+W tym projekcie wykorzystalem następujące technologie:
 
-## Features
-
-- **MicroK8s**: Lekka, lokalna wersja Kubernetes.
-- **Helm**: Menedżer pakietów do łatwego wdrażania aplikacji.
-- **Gitea**: System zarządzania kodem źródłowym.
-- **Grafana i Prometheus**: Narzędzia do monitorowania i wizualizacji metryk.
-- **Whoami**: Prosta usługa do testowania konfiguracji.
-- **Automatyzacja wdrożeń**: Wykorzystanie GitHub Actions.
-
----
-
-## Technologie
-
-- **Kubernetes**
-- **MicroK8s**
-- **Helm**
-- **Gitea**
-- **Grafana**
-- **Prometheus**
-
----
-
+- **MicroK8s**: Umożliwia łatwe uruchamianie lokalnych klastrów Kubernetes.
+- **Helm**: Służy do zarządzania aplikacjami w Kubernetes, upraszczając ich instalację.
+- **Gitea**: Zapewnia hosting repozytoriów Git do zarządzania kodem źródłowym.
+- **Grafana**: Narzędzie do wizualizacji danych monitorujących.
+- **Prometheus**: System zbierający i przechowujący metryki.
+- **Whoami**: Serwis do testowania konfiguracji i routingu.
+- **GitHub Actions**: Automatyzuje procesy CI/CD dla sprawniejszego wdrażania.
