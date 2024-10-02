@@ -45,27 +45,7 @@ jobs:
               echo "Nie znaleziono pliku deployment.yaml."
           fi
       
-      - name: Czekam 10 sekund na uruchomienie podów
-        run: |
-          echo "Czekam 10 sekund..."
-          sleep 10
-          
-      - name: Sprawdzam deploymenty
-        run: |
-          echo "Sprawdzam dostępne deploymenty..."
-          DEPLOYMENTS=$(sudo microk8s kubectl get deployments --no-headers | wc -l)
-          if [ $DEPLOYMENTS -eq 0 ]; then
-              echo "Nie znaleziono żadnych deploymentów. Zatrzymuję pipeline."
-              exit 1
-          else
-              echo "Znaleziono $DEPLOYMENTS deploymentów. Przechodzę dalej."
-          fi
-
-      - name: Czekam 5 sekund na sprawdzenie stanu
-        run: |
-          echo "Czekam 5 sekund..."
-          sleep 5
-
+   
       - name: Sprawdzam stan deploymentów
         run: |
           echo "Sprawdzam stan deploymentów..."
@@ -77,38 +57,3 @@ jobs:
               sudo microk8s kubectl get deployments
               exit 1
           fi
-
-      - name: Uruchamianie testów
-        run: |
-          echo "Uruchamianie testów..."
-          # Tutaj dodajesz swoje testy
-
-      - name: Czekam 10 sekund przed zatrzymaniem deploymentu gitea
-        run: |
-          echo "Czekam 10 sekund przed zatrzymaniem deploymentu gitea..."
-          sleep 10
-
-      - name: Zatrzymuję deployment gitea
-        run: |
-          echo "Zatrzymuję deployment gitea..."
-          sudo microk8s kubectl scale deployment gitea --replicas=0
-          echo "Deployment gitea został zatrzymany (replicas=0)."
-
-      - name: Sprawdzam stan deploymentów po zatrzymaniu deploymentu gitea
-        run: |
-          echo "Sprawdzam stan deploymentów po zatrzymaniu deploymentu gitea..."
-          DEPLOYMENTS=$(sudo microk8s kubectl get deployments -o jsonpath='{.items[*].metadata.name}')
-          
-          for DEPLOY in $DEPLOYMENTS; do
-            REPLICAS=$(sudo microk8s kubectl get deployment $DEPLOY -o jsonpath='{.status.availableReplicas}')
-            
-            if [ "$REPLICAS" == "0" ] || [ -z "$REPLICAS" ]; then
-              echo "Deployment $DEPLOY nie ma dostępnych replik. Zatrzymuję pipeline."
-              exit 1
-            else
-              echo "Deployment $DEPLOY ma dostępne repliki."
-            fi
-          done
-          
-          echo "Wszystkie pozostałe deploymenty mają dostępne repliki."
-
